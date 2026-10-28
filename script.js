@@ -1,6 +1,6 @@
 /**
- * Portfolio Dr. Yannick Frédéric OKOUAKOUA
- * Interaction, filtrage des publications et accessibilité
+ * Portfolio Scientifique & Académique — Dr. Yannick Frédéric OKOUAKOUA
+ * Interaction, accessibilité, filtrage des publications et presse-papier
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -13,57 +13,26 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /* --------------------------------------------------------------------------
-   1. Gestion du Thème (Clair / Sombre)
+   1. Gestion du Thème (Clair / Sombre avec Persistance)
    -------------------------------------------------------------------------- */
 function initThemeSwitch() {
   const toggleBtn = document.getElementById('themeToggle');
   if (!toggleBtn) return;
 
-  const savedTheme = localStorage.getItem('site-theme') || 'light';
+  const savedTheme = localStorage.getItem('okouakoua-theme') || 'light';
   document.documentElement.setAttribute('data-theme', savedTheme);
-  renderThemeIcon(savedTheme);
 
   toggleBtn.addEventListener('click', () => {
     const current = document.documentElement.getAttribute('data-theme');
     const target = current === 'dark' ? 'light' : 'dark';
     
     document.documentElement.setAttribute('data-theme', target);
-    localStorage.setItem('site-theme', target);
-    renderThemeIcon(target);
+    localStorage.setItem('okouakoua-theme', target);
   });
 }
 
-function renderThemeIcon(theme) {
-  const toggleBtn = document.getElementById('themeToggle');
-  if (!toggleBtn) return;
-
-  if (theme === 'dark') {
-    toggleBtn.innerHTML = `
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <circle cx="12" cy="12" r="5"></circle>
-        <line x1="12" y1="1" x2="12" y2="3"></line>
-        <line x1="12" y1="21" x2="12" y2="23"></line>
-        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-        <line x1="1" y1="12" x2="3" y2="12"></line>
-        <line x1="21" y1="12" x2="23" y2="12"></line>
-        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-      </svg>
-    `;
-    toggleBtn.setAttribute('title', 'Activer le mode clair');
-  } else {
-    toggleBtn.innerHTML = `
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-      </svg>
-    `;
-    toggleBtn.setAttribute('title', 'Activer le mode sombre');
-  }
-}
-
 /* --------------------------------------------------------------------------
-   2. Menu Mobile (Tiroir)
+   2. Tiroir Mobile Accessible (Drawer Nav)
    -------------------------------------------------------------------------- */
 function initMobileNav() {
   const toggle = document.getElementById('mobileMenuBtn');
@@ -74,7 +43,8 @@ function initMobileNav() {
     drawer.classList.toggle('open', isOpen);
     drawer.setAttribute('aria-hidden', String(!isOpen));
     toggle.setAttribute('aria-expanded', String(isOpen));
-    toggle.setAttribute('aria-label', isOpen ? 'Fermer le menu de navigation' : 'Ouvrir le menu de navigation');
+    toggle.setAttribute('aria-label', isOpen ? 'Fermer le menu' : 'Ouvrir le menu');
+    document.body.style.overflow = isOpen ? 'hidden' : '';
   }
 
   toggle.addEventListener('click', (e) => {
@@ -89,7 +59,7 @@ function initMobileNav() {
   });
 
   document.addEventListener('click', (e) => {
-    if (!drawer.contains(e.target) && !toggle.contains(e.target)) {
+    if (drawer.classList.contains('open') && !drawer.querySelector('.mobile-drawer-inner').contains(e.target) && !toggle.contains(e.target)) {
       setDrawerOpen(false);
     }
   });
@@ -103,14 +73,15 @@ function initMobileNav() {
 }
 
 /* --------------------------------------------------------------------------
-   3. Défilement & Indicateur de Section Active
+   3. Indicateur de Section Active (ScrollSpy)
    -------------------------------------------------------------------------- */
 function initScrollSpy() {
   const sections = document.querySelectorAll('section[id]');
-  const navLinks = document.querySelectorAll('.nav-link-item a');
+  const navLinks = document.querySelectorAll('.desktop-nav .nav-link');
+  if (!sections.length || !navLinks.length) return;
 
   function updateActiveLink() {
-    const scrollPos = window.pageYOffset + 110;
+    const scrollPos = window.scrollY + 100;
 
     sections.forEach(sec => {
       const top = sec.offsetTop;
@@ -135,9 +106,10 @@ function initScrollSpy() {
    4. Filtrage et Recherche Instantanée des Publications
    -------------------------------------------------------------------------- */
 function initPublicationsFiltering() {
-  const filterBtns = document.querySelectorAll('.pub-filter-btn');
+  const filterBtns = document.querySelectorAll('.pub-filter-pill');
   const searchInput = document.getElementById('pubSearchInput');
   const pubCards = document.querySelectorAll('.pub-card');
+  if (!pubCards.length) return;
 
   let currentCategory = 'all';
   let searchKeyword = '';
@@ -178,6 +150,29 @@ function initPublicationsFiltering() {
 /* --------------------------------------------------------------------------
    5. Copie des Références Scientifiques (BibTeX & APA)
    -------------------------------------------------------------------------- */
+function copyToClipboardFallback(text) {
+  return new Promise((resolve, reject) => {
+    const textarea = document.createElement('textarea');
+    textarea.value = text;
+    textarea.style.position = 'fixed';
+    textarea.style.top = '0';
+    textarea.style.left = '0';
+    textarea.style.opacity = '0';
+    document.body.appendChild(textarea);
+    textarea.focus();
+    textarea.select();
+    try {
+      const successful = document.execCommand('copy');
+      document.body.removeChild(textarea);
+      if (successful) resolve();
+      else reject(new Error('execCommand copy failed'));
+    } catch (err) {
+      document.body.removeChild(textarea);
+      reject(err);
+    }
+  });
+}
+
 function initCitationClipboard() {
   document.querySelectorAll('[data-copy-ref]').forEach(btn => {
     btn.addEventListener('click', async () => {
@@ -192,20 +187,12 @@ function initCitationClipboard() {
         if (navigator.clipboard && window.isSecureContext) {
           await navigator.clipboard.writeText(citation);
         } else {
-          const textarea = document.createElement('textarea');
-          textarea.value = citation;
-          textarea.setAttribute('readonly', '');
-          textarea.style.position = 'fixed';
-          textarea.style.opacity = '0';
-          document.body.appendChild(textarea);
-          textarea.select();
-          const copied = document.execCommand('copy');
-          textarea.remove();
-          if (!copied) throw new Error('La copie n’est pas disponible dans ce navigateur.');
+          await copyToClipboardFallback(citation);
         }
         showNotificationToast(`Référence ${format.toUpperCase()} copiée dans le presse-papier.`);
       } catch {
-        showNotificationToast('Copie impossible dans ce navigateur. Sélectionnez la référence pour la copier.');
+        // En cas de restriction navigateur (sandbox), copier par invite
+        prompt(`Copier la référence ${format.toUpperCase()} ci-dessous :`, citation);
       }
     });
   });
@@ -227,7 +214,7 @@ function showNotificationToast(message) {
   toast.textContent = message;
 
   container.appendChild(toast);
-  setTimeout(() => toast.classList.add('show'), 15);
+  setTimeout(() => toast.classList.add('show'), 10);
 
   setTimeout(() => {
     toast.classList.remove('show');
@@ -236,7 +223,7 @@ function showNotificationToast(message) {
 }
 
 /* --------------------------------------------------------------------------
-   6. Formulaire de Contact Direct (mailto pré-rempli)
+   6. Formulaire de Contact Professionnel (Validation & Préparation Mailto)
    -------------------------------------------------------------------------- */
 function initContactFormSubmit() {
   const form = document.getElementById('contactForm');
@@ -251,17 +238,17 @@ function initContactFormSubmit() {
     const message = document.getElementById('formMessage').value.trim();
 
     if (!name || !email || !message) {
-      showNotificationToast('Veuillez remplir tous les champs obligatoires.');
+      showNotificationToast('Veuillez compléter tous les champs obligatoires.');
       return;
     }
 
     const mailRecipient = 'fryokouakoua@gmail.com';
     const mailSubject = encodeURIComponent(subject ? `[Portfolio] ${subject}` : `[Portfolio] Contact de ${name}`);
     const mailBody = encodeURIComponent(
-      `Nom: ${name}\nAdresse email: ${email}\n\nMessage:\n${message}`
+      `Nom: ${name}\nAdresse électronique: ${email}\n\nMessage:\n${message}`
     );
 
     window.location.href = `mailto:${mailRecipient}?subject=${mailSubject}&body=${mailBody}`;
-    showNotificationToast('Votre application de messagerie doit s’ouvrir pour envoyer le message.');
+    showNotificationToast('Votre client de messagerie a été ouvert avec le message préparé.');
   });
 }

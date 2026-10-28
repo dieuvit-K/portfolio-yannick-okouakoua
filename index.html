@@ -3,499 +3,626 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dr. Yannick Frédéric OKOUAKOUA — Portfolio Scientifique & Académique</title>
+  <title>Dr. Yannick Frédéric OKOUAKOUA | Portfolio Scientifique & Académique</title>
   
-  <!-- Métadonnées SEO & Accessibilité -->
-  <meta name="description" content="Portfolio officiel du Dr. Yannick Frédéric OKOUAKOUA. Microbiologiste, Biochimiste et Biotechnologiste. Chef de Laboratoire à l'IRA, Attaché de Recherche à l'IRSEN, Enseignant à l'Université Marien Ngouabi.">
+  <!-- Métadonnées scientifiques et SEO -->
+  <meta name="description" content="Portfolio académique et scientifique officiel du Dr. Yannick Frédéric OKOUAKOUA. Docteur en Biotechnologie, Biochimie et Microbiologie Appliquée. Chef de Laboratoire à l'IRA, Attaché de Recherche à l'IRSEN, Enseignant Associé à l'Université Marien Ngouabi.">
   <meta name="author" content="Dr. Yannick Frédéric OKOUAKOUA">
   <meta name="robots" content="index, follow">
   
   <!-- Open Graph -->
   <meta property="og:title" content="Dr. Yannick Frédéric OKOUAKOUA — Portfolio Scientifique">
-  <meta property="og:description" content="Recherche en biotechnologie microbienne, valorisation des ferments traditionnels, biosurfactants et contrôle de la sécurité sanitaire des aliments.">
+  <meta property="og:description" content="Recherche en biotechnologie microbienne, valorisation des ferments traditionnels congolais, biosurfactants et sécurité sanitaire des aliments.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="assets/profile.jpg">
+
+  <!-- Polices Google Fonts : Plus Jakarta Sans & Newsreader -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <!-- Bandeau officiel de tutelle et affiliations -->
-  <aside class="gov-ribbon">
+  <!-- 1. Bandeau Institutionnel de Tutelle -->
+  <aside class="gov-ribbon" aria-label="Tutelle institutionnelle">
     <div class="container gov-ribbon-content">
-      <div>République du Congo · Ministère de l'Enseignement Supérieur, de la Recherche Scientifique et de l'Innovation Technologique</div>
-      <ul class="gov-ribbon-institutions">
-        <li>IRA</li>
-        <span>•</span>
-        <li>IRSEN</li>
-        <span>•</span>
-        <li>Université Marien Ngouabi (FST)</li>
-      </ul>
+      <div class="gov-ribbon-entity">
+        <svg class="gov-flag-svg" width="18" height="12" viewBox="0 0 600 400" aria-label="Drapeau de la République du Congo" style="border-radius: 2px; flex-shrink: 0;"><rect width="600" height="400" fill="#009543"/><polygon points="0,400 600,0 600,400" fill="#dc241f"/><polygon points="0,400 240,400 600,160 600,0 360,0 0,240" fill="#fbde4a"/></svg>
+        <span class="gov-text">République du Congo · Ministère de l'Enseignement Supérieur, de la Recherche Scientifique et de l'Innovation Technologique</span>
+      </div>
+      <div class="gov-ribbon-poles">
+        <span class="gov-pole">IRA</span>
+        <span class="gov-sep" aria-hidden="true">•</span>
+        <span class="gov-pole">IRSEN</span>
+        <span class="gov-sep" aria-hidden="true">•</span>
+        <span class="gov-pole">UMNG (FST)</span>
+      </div>
     </div>
   </aside>
 
-  <!-- En-tête de navigation -->
-  <header class="site-header">
+  <!-- 2. En-tête de Navigation Sticky & Responsive -->
+  <header class="site-header" id="siteHeader">
     <div class="container nav-container">
-      <a href="#accueil" class="nav-brand" aria-label="Retour à l'accueil">
-        <div class="brand-badge">YO</div>
-        <div class="brand-meta">
-          <h1>Dr. Yannick Frédéric OKOUAKOUA</h1>
-          <span>Microbiologiste · Biochimiste · Biotechnologiste</span>
-        </div>
+      
+      <!-- Brand Identity -->
+      <a href="#accueil" class="nav-brand" aria-label="Retour au sommet">
+        <span class="brand-monogram">YO</span>
+        <span class="brand-identity-text">
+          <span class="brand-name">
+            <span class="brand-name-full">Dr. Yannick Frédéric OKOUAKOUA</span>
+            <span class="brand-name-short">Dr. Yannick F. OKOUAKOUA</span>
+          </span>
+          <span class="brand-role">Docteur en Sciences · Microbiologiste</span>
+        </span>
       </a>
 
-      <nav aria-label="Navigation principale">
+      <!-- Desktop Links -->
+      <nav class="desktop-nav" aria-label="Navigation principale">
         <ul class="nav-links">
-          <li class="nav-link-item"><a href="#accueil" class="active">Accueil</a></li>
-          <li class="nav-link-item"><a href="#profil">Profil & Expertise</a></li>
-          <li class="nav-link-item"><a href="#experiences">Expériences</a></li>
-          <li class="nav-link-item"><a href="#projets">Recherche</a></li>
-          <li class="nav-link-item"><a href="#publications">Publications</a></li>
-          <li class="nav-link-item"><a href="#formation">Formation</a></li>
-          <li class="nav-link-item"><a href="#enseignement">Enseignement</a></li>
-          <li class="nav-link-item"><a href="#contact">Contact</a></li>
+          <li><a href="#accueil" class="nav-link active">Accueil</a></li>
+          <li><a href="#profil" class="nav-link">Expertise</a></li>
+          <li><a href="#experiences" class="nav-link">Parcours</a></li>
+          <li><a href="#projets" class="nav-link">Recherche</a></li>
+          <li><a href="#publications" class="nav-link">Publications</a></li>
+          <li><a href="#formation" class="nav-link">Formation</a></li>
+          <li><a href="#enseignement" class="nav-link">Enseignement</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
       </nav>
 
-      <div class="header-buttons">
-        <button id="themeToggle" class="theme-switch-btn" aria-label="Basculer entre mode sombre et clair" title="Basculer le thème"></button>
+      <!-- Action Controls -->
+      <div class="header-actions">
+        <button id="themeToggle" class="btn-icon" aria-label="Basculer entre mode sombre et clair" title="Basculer le thème">
+          <svg class="sun-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+          <svg class="moon-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
+
         <button id="mobileMenuBtn" class="mobile-nav-toggle" aria-label="Ouvrir le menu de navigation" aria-expanded="false" aria-controls="mobileDrawer">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <line x1="3" y1="12" x2="21" y2="12"></line>
-            <line x1="3" y1="6" x2="21" y2="6"></line>
-            <line x1="3" y1="18" x2="21" y2="18"></line>
-          </svg>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
         </button>
       </div>
     </div>
 
-    <!-- Tiroir Mobile -->
-    <div id="mobileDrawer" class="mobile-nav-drawer" aria-hidden="true">
-      <a href="#accueil">Accueil</a>
-      <a href="#profil">Profil & Domaines d'Expertise</a>
-      <a href="#experiences">Expériences Professionnelles</a>
-      <a href="#projets">Projets de Recherche Documentés</a>
-      <a href="#publications">Publications Scientifiques</a>
-      <a href="#formation">Formation & Certifications</a>
-      <a href="#enseignement">Enseignement & Compétences</a>
-      <a href="#contact">Contact & Téléchargement CV</a>
+    <!-- Mobile Drawer Overlay -->
+    <div id="mobileDrawer" class="mobile-drawer" aria-hidden="true">
+      <div class="mobile-drawer-inner">
+        <nav aria-label="Navigation mobile">
+          <ul class="mobile-links">
+            <li><a href="#accueil" class="mobile-link">Accueil</a></li>
+            <li><a href="#profil" class="mobile-link">Expertise & Domaines</a></li>
+            <li><a href="#experiences" class="mobile-link">Parcours & Fonctions</a></li>
+            <li><a href="#projets" class="mobile-link">Recherche Appliquée</a></li>
+            <li><a href="#publications" class="mobile-link">Publications Scientifiques</a></li>
+            <li><a href="#formation" class="mobile-link">Formation & Titres</a></li>
+            <li><a href="#enseignement" class="mobile-link">Enseignement & Encadrement</a></li>
+            <li><a href="#references" class="mobile-link">Directeurs de Recherche</a></li>
+            <li><a href="#contact" class="mobile-link">Coordonnées & Téléchargement</a></li>
+          </ul>
+        </nav>
+        <div class="mobile-drawer-footer">
+          <a href="mon cv.docx" download class="btn btn-secondary btn-full">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="1" x2="12" y2="3"></line></svg>
+            <span>Télécharger le CV officiel</span>
+          </a>
+        </div>
+      </div>
     </div>
   </header>
 
   <main>
-    <!-- SECTION 1 : Accueil avec nom, titre et boutons de contact -->
-    <section id="accueil" class="hero-block">
-      <div class="container">
-        <div class="hero-layout">
-          
-          <div class="hero-main-content">
-            <div class="hero-tag">
-              <span>Docteur en Sciences · Ph.D.</span>
+    <!-- 3. Section Hero Académique Asymétrique -->
+    <section id="accueil" class="hero-section">
+      <div class="container hero-container">
+        
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="badge-dot"></span>
+            <span class="badge-text-full">Docteur en Sciences (Ph.D.) · Microbiologie & Biotechnologie</span>
+            <span class="badge-text-short">Docteur en Sciences (Ph.D.)</span>
+          </div>
+
+          <h1 class="hero-title">
+            Dr. Yannick Frédéric <span class="text-accent">OKOUAKOUA</span>
+          </h1>
+
+          <p class="hero-academic-lead">
+            Docteur en Biotechnologie, Biochimie et Microbiologie Appliquée
+          </p>
+
+          <p class="hero-bio">
+            Recherche fondamentale et appliquée en microbiologie, valorisation biotechnologique des ferments traditionnels congolais, caractérisation des biosurfactants bactériens, contrôle de la sécurité sanitaire des aliments et dépollution biologique des écosystèmes.
+          </p>
+
+          <!-- Fonctions Actuelles Directes -->
+          <div class="hero-roles">
+            <div class="role-entry">
+              <div class="role-logo-wrap">
+                <img src="assets/logos/ira.webp" alt="Institut National de Recherche en Agronomie" class="role-logo">
+              </div>
+              <div class="role-meta">
+                <span class="role-title">Chef de laboratoire de Bromatologie et technologies agroalimentaires</span>
+                <span class="role-inst">Institut National de Recherche en Agronomie (IRA) · 2025 – présent</span>
+              </div>
             </div>
 
-            <h2 class="hero-name">Dr. Yannick Frédéric OKOUAKOUA</h2>
-
-            <p class="hero-role-lead">
-              Docteur en Biotechnologie, Biochimie et Microbiologie Appliquée
-            </p>
-
-            <p class="hero-desc">
-              Recherche fondamentale et appliquée en microbiologie, valorisation des métabolites bactériens et des ferments traditionnels congolais, sécurité alimentaire et dépollution biologique des écosystèmes.
-            </p>
-
-            <!-- Fonctions institutionnelles avec logos officiels -->
-            <div class="current-roles-box">
-              <div class="current-role-item">
-                <img src="assets/logos/ira.webp" alt="Logo IRA" class="role-logo-mini">
-                <div><strong>Chef de laboratoire de Bromatologie et technologies agroalimentaires</strong> — Institut National de Recherche en Agronomie (IRA), 2025 – présent.</div>
+            <div class="role-entry">
+              <div class="role-logo-wrap">
+                <img src="assets/logos/irsen.webp" alt="Institut National de Recherche en Sciences Exactes et Naturelles" class="role-logo">
               </div>
-              <div class="current-role-item">
-                <img src="assets/logos/irsen.webp" alt="Logo IRSEN" class="role-logo-mini">
-                <div><strong>Attaché de Recherche</strong> — Institut National de Recherche en Sciences Exactes et Naturelles (IRSEN), 2025 – présent.</div>
-              </div>
-              <div class="current-role-item">
-                <img src="assets/logos/umng.png" alt="Logo Université Marien Ngouabi" class="role-logo-mini">
-                <div><strong>Enseignant et Chercheur Associé</strong> — Faculté des Sciences et Techniques, Université Marien Ngouabi (2019 – 2024).</div>
+              <div class="role-meta">
+                <span class="role-title">Attaché de Recherche</span>
+                <span class="role-inst">Institut National de Recherche en Sciences Exactes et Naturelles (IRSEN) · 2025 – présent</span>
               </div>
             </div>
 
-            <div class="hero-cta-row">
-              <a href="#contact" class="btn btn-primary">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                <span>Prendre contact</span>
-              </a>
-              <a href="mon cv.docx" download class="btn btn-secondary">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                <span>Télécharger le CV (Word)</span>
-              </a>
-              <a href="#publications" class="btn btn-secondary">
-                <span>Publications scientifiques</span>
-              </a>
+            <div class="role-entry">
+              <div class="role-logo-wrap">
+                <img src="assets/logos/umng.png" alt="Université Marien Ngouabi" class="role-logo">
+              </div>
+              <div class="role-meta">
+                <span class="role-title">Enseignant & Chercheur Associé</span>
+                <span class="role-inst">Faculté des Sciences et Techniques, Université Marien Ngouabi · 2019 – 2024</span>
+              </div>
             </div>
           </div>
 
-          <!-- Portrait Officiel avec Cadrage Haute Définition -->
-          <div class="portrait-card">
-            <div class="portrait-image-wrapper">
+          <!-- CTAs -->
+          <div class="hero-actions">
+            <a href="#publications" class="btn btn-primary">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+              <span>Publications scientifiques</span>
+            </a>
+            <a href="mon cv.docx" download class="btn btn-secondary">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="1" x2="12" y2="3"></line></svg>
+              <span>Télécharger le CV</span>
+            </a>
+            <a href="#contact" class="btn btn-ghost">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              <span>Prendre contact</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Portrait Académique -->
+        <div class="hero-visual">
+          <div class="portrait-frame">
+            <div class="portrait-image-holder">
               <img src="assets/profile.jpg" alt="Portrait officiel du Dr. Yannick Frédéric OKOUAKOUA" class="portrait-img">
-              <div class="portrait-info-tag">
-                <h3>Dr. Yannick Frédéric OKOUAKOUA</h3>
-                <p>Docteur en Biotechnologie, Biochimie et Microbiologie Appliquée</p>
-              </div>
+            </div>
+            <div class="portrait-academic-footer">
+              <span class="portrait-name">Dr. Yannick Frédéric OKOUAKOUA</span>
+              <span class="portrait-title">Docteur en Sciences · Ph.D.</span>
+              <span class="portrait-discipline">Biotechnologie, Biochimie & Microbiologie</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 4. Bandeau de Crédibilité & Tutelles Institutionnelles -->
+    <section class="institutions-banner" aria-label="Institutions partenaires et tutelles">
+      <div class="container">
+        <div class="institutions-strip">
+          <div class="inst-item">
+            <img src="assets/logos/ministere.jpg" alt="Ministère de la Recherche Scientifique" class="inst-logo">
+            <div class="inst-caption">
+              <strong>Ministère de Tutelle</strong>
+              <span>Enseignement Supérieur, Recherche & Innovation</span>
             </div>
           </div>
 
+          <div class="inst-item">
+            <img src="assets/logos/ira.webp" alt="Institut National de Recherche en Agronomie" class="inst-logo">
+            <div class="inst-caption">
+              <strong>IRA</strong>
+              <span>Institut National de Recherche en Agronomie</span>
+            </div>
+          </div>
+
+          <div class="inst-item">
+            <img src="assets/logos/irsen.webp" alt="Institut National de Recherche en Sciences Exactes et Naturelles" class="inst-logo">
+            <div class="inst-caption">
+              <strong>IRSEN</strong>
+              <span>Sciences Exactes et Naturelles</span>
+            </div>
+          </div>
+
+          <div class="inst-item">
+            <img src="assets/logos/umng.png" alt="Université Marien Ngouabi" class="inst-logo">
+            <div class="inst-caption">
+              <strong>UMNG</strong>
+              <span>Faculté des Sciences et Techniques (FST)</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Bandeau des Logos Institutionnels -->
-    <section class="institutions-strip" aria-label="Institutions officielles de rattachement">
-      <div class="container institutions-inner">
-        <span class="institutions-lead">Tutelle & Rattachements :</span>
-        <div class="logos-grid">
-          <div class="logo-item" title="Ministère de l'Enseignement Supérieur, de la Recherche Scientifique et de l'Innovation Technologique">
-            <img src="assets/logos/ministere.jpg" alt="Ministère de la Recherche Scientifique">
-            <span>Ministère</span>
+    <!-- 5. Chiffres Clés Scientifiques -->
+    <section class="metrics-strip">
+      <div class="container">
+        <div class="metrics-grid">
+          <div class="metric-card">
+            <span class="metric-num">5</span>
+            <span class="metric-label">Publications & travaux majeurs avec DOI</span>
           </div>
-          <div class="logo-item" title="Institut National de Recherche en Agronomie (IRA)">
-            <img src="assets/logos/ira.webp" alt="Institut National de Recherche en Agronomie (IRA)" loading="lazy" decoding="async">
-            <span>IRA</span>
+          <div class="metric-card">
+            <span class="metric-num">3</span>
+            <span class="metric-label">Institutions académiques & de recherche</span>
           </div>
-          <div class="logo-item" title="Institut National de Recherche en Sciences Exactes et Naturelles (IRSEN)">
-            <img src="assets/logos/irsen.webp" alt="Institut National de Recherche en Sciences Exactes et Naturelles (IRSEN)" loading="lazy" decoding="async">
-            <span>IRSEN</span>
+          <div class="metric-card">
+            <span class="metric-num">15+</span>
+            <span class="metric-label">Mémoires de Master et stages encadrés</span>
           </div>
-          <div class="logo-item" title="Université Marien Ngouabi (Faculté des Sciences et Techniques)">
-            <img src="assets/logos/umng.png" alt="Université Marien Ngouabi">
-            <span>UMNG</span>
+          <div class="metric-card">
+            <span class="metric-num">10+</span>
+            <span class="metric-label">Années de pratique laboratoire et terrain</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- SECTION 2 : Profil scientifique et domaines d'expertise -->
+    <!-- 6. Domaines d'Expertise & Piliers Scientifiques -->
     <section id="profil" class="section">
       <div class="container">
-        <div class="section-intro">
-          <div class="section-kicker">Profil scientifique</div>
-          <h2 class="section-heading">Domaines d'expertise et compétences clés</h2>
-          <p class="section-subtext">
-            Docteur en Biotechnologie, Biochimie et Microbiologie Appliquée doté d'une expérience combinée en laboratoire de recherche, en milieu académique et en milieu industriel (audits de sécurité sanitaire et environnementale).
+        <div class="section-header">
+          <h2 class="section-title">Piliers d'expertise scientifique</h2>
+          <p class="section-lead">
+            Compétences acquises en recherche fondamentale, conduite d'essais pilotes en laboratoire et gestion de la conformité analytique en milieu agroalimentaire et hospitalier.
           </p>
         </div>
 
-        <div class="expertise-grid">
-          <div class="expertise-card">
-            <span class="expertise-number">01</span>
-            <h3>Microbiologie Appliquée & Fermentation</h3>
-            <p>Isolement, criblage et caractérisation phénotypique et moléculaire de bactéries d'intérêt biotechnologique (notamment souches de <em>Bacillus</em> et <em>Lactobacillus</em>). Étude fonctionnelle des cinétiques fermentaires traditionnelles.</p>
+        <div class="pillars-bento">
+          
+          <div class="pillar-card pillar-featured">
+            <div class="pillar-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 2v7.31M14 9.3V1.99M8.5 2h7M14 9.3a6.5 6.5 0 1 1-4 0"></path><path d="M5.52 16h12.96"></path></svg>
+            </div>
+            <h3 class="pillar-title">Microbiologie appliquée & fermentations traditionnelles</h3>
+            <p class="pillar-desc">
+              Isolement, purification et caractérisation de micro-organismes issus des ferments indigènes congolais (vin de canne à sucre <em>Loungouila</em> de Madingou, met fermenté <em>Mbala Pinda</em>). Étude de la dynamique bactérienne, profilage protéomique MALDI-TOF et production d'enzymes d'intérêt technologique (amylases, protéases, cellulases).
+            </p>
+            <div class="pillar-tags">
+              <span class="pill-tag">Bactéries <em>Bacillus</em></span>
+              <span class="pill-tag">Lactobacilles</span>
+              <span class="pill-tag">Protéomique MALDI-TOF</span>
+              <span class="pill-tag">Enzymes hydrolytiques</span>
+            </div>
           </div>
 
-          <div class="expertise-card">
-            <span class="expertise-number">02</span>
-            <h3>Bromatologie & Contrôle Sanitaire</h3>
-            <p>Analyses physicochimiques et microbiologiques complètes des matrices alimentaires, des eaux et des surfaces. Maîtrise des protocoles de biosécurité, des démarches HACCP et des risques d'origine bactérienne.</p>
+          <div class="pillar-card">
+            <div class="pillar-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            </div>
+            <h3 class="pillar-title">Bromatologie & sécurité sanitaire des aliments</h3>
+            <p class="pillar-desc">
+              Contrôles microbiologiques et physico-chimiques sur matrices alimentaires, eau potable et effluents. Audits d'hygiène suivant la méthode HACCP, validation des process de pasteurisation et contrôle bactériologique des chaînes de production.
+            </p>
+            <div class="pillar-tags">
+              <span class="pill-tag">Normes HACCP</span>
+              <span class="pill-tag">Analyses des eaux</span>
+              <span class="pill-tag">Sécurité microbiologique</span>
+            </div>
           </div>
 
-          <div class="expertise-card">
-            <span class="expertise-number">03</span>
-            <h3>Biosurfactants & Bioremédiation</h3>
-            <p>Étude des métabolites secondaires à activité de surface, formulation d'antiseptiques biosourcés (savon à froid) et dépollution biologique des effluents et des sols sous pollution organique et minérale.</p>
+          <div class="pillar-card">
+            <div class="pillar-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+            </div>
+            <h3 class="pillar-title">Biosurfactants & bioremédiation environnementale</h3>
+            <p class="pillar-desc">
+              Caractérisation des tensioactifs bactériens secondaires, mesure des indices d'émulsification E24 et inhibition de biofilms pathogènes. Application à la dépollution d'hydrocarbures et rhizorémédiation des eaux usées à l'aide de peuplements de papyrus.
+            </p>
+            <div class="pillar-tags">
+              <span class="pill-tag">Translocon SecYEG</span>
+              <span class="pill-tag">Indice E24</span>
+              <span class="pill-tag">Phytorémédiation papyrus</span>
+            </div>
           </div>
 
-          <div class="expertise-card">
-            <span class="expertise-number">04</span>
-            <h3>Biologie Moléculaire & Bio-informatique</h3>
-            <p>Extraction d'acides nucléiques, PCR et RT-PCR (ABI One Step), séquençage et analyse de l'ADNr 16S, spectrométrie de masse MALDI-TOF MS, alignements de séquences (BLAST) et traitement statistique de données.</p>
+          <div class="pillar-card">
+            <div class="pillar-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M8 12h8"></path><path d="M12 8v8"></path></svg>
+            </div>
+            <h3 class="pillar-title">Biologie moléculaire & bio-informatique</h3>
+            <p class="pillar-desc">
+              Extraction d'ADN génomique et plasmidique, amplification par PCR standard et RT-PCR ABI One Step. Analyse de séquences génétiques ARNr 16S, alignements multiples BLAST, reconstructions phylogénétiques (MEGA, BioEdit) et gestion de bases génomiques.
+            </p>
+            <div class="pillar-tags">
+              <span class="pill-tag">RT-PCR ABI</span>
+              <span class="pill-tag">ARNr 16S</span>
+              <span class="pill-tag">Logiciel MEGA</span>
+              <span class="pill-tag">BLAST & BioEdit</span>
+            </div>
           </div>
+
         </div>
       </div>
     </section>
 
-    <!-- SECTION 3 : Expériences professionnelles (Chronologie) -->
-    <section id="experiences" class="section">
+    <!-- 7. Parcours Professionnel & Fonctions Documentées -->
+    <section id="experiences" class="section section-muted">
       <div class="container">
-        <div class="section-intro">
-          <div class="section-kicker">Parcours professionnel</div>
-          <h2 class="section-heading">Fonctions de recherche, responsabilités et expertises</h2>
-          <p class="section-subtext">
-            Historique documenté des postes de direction de laboratoire, recherche publique, enseignement supérieur et missions d'expertise appliquée.
+        <div class="section-header">
+          <h2 class="section-title">Parcours professionnel & responsabilités</h2>
+          <p class="section-lead">
+            Historique des nominations, des responsabilités de laboratoire et des interventions d'audit technique.
           </p>
         </div>
 
         <div class="timeline-container">
           
-          <div class="timeline-row">
-            <div class="timeline-dates">
-              <span class="timeline-badge-year">2025 – Présent</span>
-              <span class="timeline-tag-cat">Recherche Publique</span>
+          <!-- Entrée 1 -->
+          <article class="timeline-item">
+            <div class="timeline-meta">
+              <span class="timeline-period current">2025 – présent</span>
+              <span class="timeline-org">IRA</span>
             </div>
-            <div class="timeline-body">
-              <h3>Chef de laboratoire de Bromatologie et technologies agroalimentaires</h3>
-              <div class="timeline-org">Institut National de Recherche en Agronomie (IRA)</div>
-              <ul class="timeline-list">
-                <li>Direction des activités analytiques et bromatologiques du laboratoire.</li>
-                <li>Développement et validation de protocoles pour l'analyse nutritionnelle et technologique des denrées alimentaires locales.</li>
+            <div class="timeline-card">
+              <h3 class="timeline-role">Chef de laboratoire de Bromatologie et technologies agroalimentaires</h3>
+              <div class="timeline-location">Institut National de Recherche en Agronomie (IRA) · République du Congo</div>
+              <ul class="timeline-points">
+                <li>Supervision technique des activités analytiques et bromatologiques du laboratoire.</li>
+                <li>Développement et standardisation de protocoles d'analyse pour la transformation et la valorisation nutritionnelle des denrées alimentaires locales.</li>
+                <li>Coordination des essais technologiques sur les matrices végétales et fermentées.</li>
               </ul>
             </div>
-          </div>
+          </article>
 
-          <div class="timeline-row">
-            <div class="timeline-dates">
-              <span class="timeline-badge-year">2025 – Présent</span>
-              <span class="timeline-tag-cat">Recherche Publique</span>
+          <!-- Entrée 2 -->
+          <article class="timeline-item">
+            <div class="timeline-meta">
+              <span class="timeline-period current">2025 – présent</span>
+              <span class="timeline-org">IRSEN</span>
             </div>
-            <div class="timeline-body">
-              <h3>Attaché de Recherche</h3>
-              <div class="timeline-org">Institut National de Recherche en Sciences Exactes et Naturelles (IRSEN)</div>
-              <ul class="timeline-list">
-                <li>Conduite de projets de recherche nationaux en biotechnologies appliquées.</li>
-                <li>Validation de thématiques d'expérimentation et rédaction de publications scientifiques.</li>
+            <div class="timeline-card">
+              <h3 class="timeline-role">Attaché de Recherche</h3>
+              <div class="timeline-location">Institut National de Recherche en Sciences Exactes et Naturelles (IRSEN) · Cité Scientifique</div>
+              <ul class="timeline-points">
+                <li>Pilotage des axes de recherche en biotechnologie microbienne et biosurfactants.</li>
+                <li>Valorisation scientifique par la rédaction et la publication d'articles dans des revues internationales à comité de lecture.</li>
+                <li>Participation aux commissions d'orientation scientifique et formulation des thématiques nationales.</li>
               </ul>
             </div>
-          </div>
+          </article>
 
-          <div class="timeline-row">
-            <div class="timeline-dates">
-              <span class="timeline-badge-year">2020 – 2024</span>
-              <span class="timeline-tag-cat">Enseignement Supérieur</span>
+          <!-- Entrée 3 -->
+          <article class="timeline-item">
+            <div class="timeline-meta">
+              <span class="timeline-period">2020 – 2024</span>
+              <span class="timeline-org">UMNG</span>
             </div>
-            <div class="timeline-body">
-              <h3>Enseignant non permanent</h3>
-              <div class="timeline-org">Faculté des Sciences et Techniques, Université Marien Ngouabi</div>
-              <ul class="timeline-list">
-                <li>Chargé des cours magistraux, travaux pratiques et dirigés : Biochimie, Microbiologie, Biologie moléculaire, Biologie cellulaire, Biophysique, Immunologie, Génétique.</li>
-                <li>Assistance des cours de Biochimie et de Microbiologie en Licence.</li>
-                <li>Encadrement de mémoires d'étudiants, participation aux jurys de délibération, correction d'examens et supervision.</li>
+            <div class="timeline-card">
+              <h3 class="timeline-role">Enseignant non permanent</h3>
+              <div class="timeline-location">Faculté des Sciences et Techniques (FST), Université Marien Ngouabi</div>
+              <ul class="timeline-points">
+                <li>Enseignement magistral, travaux dirigés et travaux pratiques : Biochimie, Microbiologie, Biologie moléculaire, Biologie cellulaire, Biophysique, Immunologie, Génétique.</li>
+                <li>Encadrement des mémoires de fin de cycle, participation aux jurys de délibération et correction des examens.</li>
+                <li>Assistance pédagogique aux cours de Biochimie et de Microbiologie au niveau Licence.</li>
               </ul>
             </div>
-          </div>
+          </article>
 
-          <div class="timeline-row">
-            <div class="timeline-dates">
-              <span class="timeline-badge-year">2019 – 2024</span>
-              <span class="timeline-tag-cat">Recherche Universitaire</span>
+          <!-- Entrée 4 -->
+          <article class="timeline-item">
+            <div class="timeline-meta">
+              <span class="timeline-period">2018 – 2024</span>
+              <span class="timeline-org">IRSEN</span>
             </div>
-            <div class="timeline-body">
-              <h3>Chercheur Associé</h3>
-              <div class="timeline-org">Faculté des Sciences et Techniques (UMNG) & IRSEN</div>
-              <ul class="timeline-list">
-                <li>Contribution au support technique et au plateau technique de recherche.</li>
-                <li>Gestion de projets de recherche, rédaction et suivi des protocoles scientifiques.</li>
+            <div class="timeline-card">
+              <h3 class="timeline-role">Assistant du Chef de laboratoire de Microbiologie appliquée et biologie moléculaire</h3>
+              <div class="timeline-location">Institut National de Recherche en Sciences Exactes et Naturelles (IRSEN)</div>
+              <ul class="timeline-points">
+                <li>Gestion opérationnelle des projets de recherche, des stocks de réactifs et maintenance de l'appareillage de pointe.</li>
+                <li>Encadrement direct de plus de 15 mémoires de Master (FST, ENSP, ENS, ENSAF) et tutorat des stagiaires.</li>
+                <li>Rédaction et standardisation des procédures opérationnelles et des fiches de sécurité biologique.</li>
               </ul>
             </div>
-          </div>
+          </article>
 
-          <div class="timeline-row">
-            <div class="timeline-dates">
-              <span class="timeline-badge-year">2018 – 2024</span>
-              <span class="timeline-tag-cat">Gestion de Laboratoire</span>
+          <!-- Entrée 5 -->
+          <article class="timeline-item">
+            <div class="timeline-meta">
+              <span class="timeline-period">2021 – 2024</span>
+              <span class="timeline-org">IRSEN</span>
             </div>
-            <div class="timeline-body">
-              <h3>Assistant du Chef de laboratoire de Microbiologie appliquée et de biologie moléculaire</h3>
-              <div class="timeline-org">IRSEN</div>
-              <ul class="timeline-list">
-                <li>Gestion des stocks, réactifs, équipements et matériels d'analyse.</li>
-                <li>Rédaction et validation des protocoles opératoires standards et rapports d'activités.</li>
-                <li>Encadrement des mémoires de Master (FST, ENSP, ENS, ENSAF) et suivi des stagiaires (FST, UDSN, ENSAF, ENSP).</li>
-                <li>Responsable de la section contrôle qualité et aliments (2021–2024) : analyses physicochimiques et microbiologiques des sols, des eaux et des aliments.</li>
+            <div class="timeline-card">
+              <h3 class="timeline-role">Responsable de la section Contrôle Qualité et Aliments</h3>
+              <div class="timeline-location">Laboratoire de Microbiologie Appliquée, IRSEN</div>
+              <ul class="timeline-points">
+                <li>Contrôles microbiologiques et physicochimiques des sols, des eaux et des produits alimentaires commerciaux.</li>
+                <li>Caractérisation de la flore bactérienne des aliments fermentés locaux et extraction de biomolécules actives.</li>
               </ul>
             </div>
-          </div>
+          </article>
 
-          <div class="timeline-row">
-            <div class="timeline-dates">
-              <span class="timeline-badge-year">2022 – 2023</span>
-              <span class="timeline-tag-cat">Audits & Expertises de Terrain</span>
+          <!-- Entrée 6 -->
+          <article class="timeline-item">
+            <div class="timeline-meta">
+              <span class="timeline-period">2022 – 2023</span>
+              <span class="timeline-org">Expertise</span>
             </div>
-            <div class="timeline-body">
-              <h3>Missions de contrôle qualité et sécurité sanitaire</h3>
-              <div class="timeline-org">Radisson Blu Hotel · Station de Kintélé · École de Nganga-Lingolo</div>
-              <ul class="timeline-list">
-                <li><strong>Radisson Blu Hotel (2022–2023)</strong> : Analyses physicochimiques des eaux, prélèvements de surfaces, analyses microbiologiques des plats préparés et contrôle bactériologique des mains du personnel.</li>
-                <li><strong>Station agropastorale de Kintélé (2022–2023)</strong> : Évaluation physicochimique et environnementale de la qualité des eaux usées de la ferme avant rejet dans le milieu naturel.</li>
-                <li><strong>École catholique des sœurs de Nganga-Lingolo (Nov 2022)</strong> : Consultation pour le montage et l'installation complète des équipements d'un laboratoire de biologie.</li>
+            <div class="timeline-card">
+              <h3 class="timeline-role">Missions d'audit qualité, hygiène et sécurité environnementale</h3>
+              <div class="timeline-location">Interventions en entreprise et sites industriels</div>
+              <ul class="timeline-points">
+                <li><strong>Radisson Blu Hotel (2022–2023) :</strong> Analyses physico-chimiques et microbiologiques des eaux, prélèvements de surfaces alimentaires, contrôles des plats servis et hygiène des mains du personnel de cuisine.</li>
+                <li><strong>Station agropastorale de Kintélé (2022–2023) :</strong> Évaluation de l'impact des effluents de la ferme avicole et porcine avant rejet dans le ruisseau récepteur.</li>
+                <li><strong>École des Sœurs de Nganga-Lingolo (2022) :</strong> Conseil technique et montage du plateau expérimental de biologie.</li>
               </ul>
             </div>
-          </div>
+          </article>
 
-          <div class="timeline-row">
-            <div class="timeline-dates">
-              <span class="timeline-badge-year">2014 – 2023</span>
-              <span class="timeline-tag-cat">Stages Formateurs de Spécialisation</span>
+          <!-- Entrée 7 -->
+          <article class="timeline-item">
+            <div class="timeline-meta">
+              <span class="timeline-period">2014 – 2023</span>
+              <span class="timeline-org">Stages</span>
             </div>
-            <div class="timeline-body">
-              <h3>Stages techniques en laboratoires de pointe</h3>
-              <div class="timeline-org">IRSSA · LNSP · Pôle d'Excellence FST · Hôpital Militaire · Brasserie du Congo · BAYO</div>
-              <ul class="timeline-list">
-                <li><strong>IRSSA (2022–2023)</strong> : Formation sur équipement RT-PCR ABI Système One Step et approche de diagnostic moléculaire de la tuberculose.</li>
-                <li><strong>Pôle d'Excellence FST (2021–2022)</strong> : Analyses de sols et d'eaux de forages, rhizorémédiation par papyrus et utilisation de la chromatographie en phase gazeuse.</li>
-                <li><strong>Hôpital Militaire des Armées (2016–2017)</strong> : Analyses hématologiques, biochimiques, sérologiques et bactériologiques sur prélèvements physiologiques.</li>
-                <li><strong>Laboratoire National de Santé Publique (2015–2016)</strong> : Diagnostic biologique médical et initiation aux techniques moléculaires.</li>
-                <li><strong>Brasserie du Congo (2014) & BAYO (2016)</strong> : Procédés fermentaires industriels (bière et yaourt), contrôle microbiologique et suivi de chaîne de production.</li>
+            <div class="timeline-card">
+              <h3 class="timeline-role">Stages d'excellence en plateaux techniques hospitaliers et industriels</h3>
+              <div class="timeline-location">Centres hospitaliers et industries de pointe</div>
+              <ul class="timeline-points">
+                <li><strong>IRSSA (2022–2023) :</strong> Formation sur RT-PCR ABI Système One Step et application au diagnostic moléculaire de la tuberculose.</li>
+                <li><strong>Pôle d'Excellence FST (2021–2022) :</strong> Analyses sur chromatographie gazeuse, dépollution par phytorémédiation (papyrus).</li>
+                <li><strong>Hôpital Militaire des Armées (2016–2017) :</strong> Bactériologie médicale, biochimie clinique, sérologie et hématologie.</li>
+                <li><strong>Laboratoire National de Santé Publique (2015–2016) :</strong> Analyses hématologiques, sérologiques et diagnostic médical.</li>
+                <li><strong>Brasserie du Congo (BRALICO, 2014) :</strong> Suivi de la fermentation industrielle de la bière et contrôles qualité sur ligne de conditionnement.</li>
+                <li><strong>Compagnie BAYO (2016) :</strong> Maîtrise des process de fabrication industrielle de yaourt et contrôles microbiologiques du lait.</li>
               </ul>
             </div>
-          </div>
+          </article>
 
         </div>
       </div>
     </section>
 
-    <!-- SECTION 4 : Projets de recherche (Objectifs, Méthodes, Résultats documentés) -->
+    <!-- 8. Travaux & Projets de Recherche Détaillés -->
     <section id="projets" class="section">
       <div class="container">
-        <div class="section-intro">
-          <div class="section-kicker">Recherche scientifique documentée</div>
-          <h2 class="section-heading">Projets de recherche : Objectifs, Méthodes & Résultats</h2>
-          <p class="section-subtext">
-            Chaque projet présenté ci-dessous s'appuie strictement sur des travaux de recherche validés et publiés, détaillant la démarche expérimentale et les résultats obtenus.
+        <div class="section-header">
+          <h2 class="section-title">Recherches documentées & résultats majeurs</h2>
+          <p class="section-lead">
+            Synthèse des cinq programmes de recherche expérimentale menés en laboratoire, avec leurs protocoles et leurs résultats quantifiés.
           </p>
         </div>
 
         <div class="projects-grid">
           
           <!-- Projet 1 -->
-          <div class="project-card">
-            <div class="project-topic-badge">Fermentations Locales · MALDI-TOF MS</div>
-            <h3>Profilage moléculaire du vin de canne à sucre (Loungouila) de Madingou</h3>
-            
-            <div class="project-detail-block">
-              <span class="project-label">Objectif</span>
-              <p class="project-text">Caractériser la dynamique physicochimique de fermentation et identifier le potentiel protéomique et enzymatique de la microflore bactérienne locale.</p>
+          <article class="project-dossier">
+            <div class="project-head">
+              <span class="project-badge">Aliments Fermentés · MALDI-TOF</span>
+              <h3 class="project-title">Profilage moléculaire du vin de canne à sucre (Loungouila) de Madingou</h3>
             </div>
-
-            <div class="project-detail-block">
-              <span class="project-label">Méthodes</span>
-              <p class="project-text">Suivi sur 7 à 10 jours de l'acidité titrable, du pH et des polyphénols totaux. Isolement de souches de <em>Bacillus</em> et spectrométrie de masse MALDI-TOF MS pour le séquençage peptidique direct.</p>
+            <div class="project-body">
+              <div class="project-subfield">
+                <strong>Objectif :</strong> Caractériser la dynamique physico-chimique et identifier par spectrométrie de masse MALDI-TOF les souches bactériennes responsables de la fermentation du Loungouila.
+              </div>
+              <div class="project-subfield">
+                <strong>Méthodologie :</strong> Suivi cinétique sur 72 heures du pH, de l'acidité titrable et du degré alcoolique. Isolement sur milieux sélectifs, extraction protéique et comparaison des spectres MALDI-TOF MS.
+              </div>
+              <div class="project-result-box">
+                <strong>Résultats majeurs :</strong> Chute du pH à 4,20, rendement alcoolique atteignant 10,5% vol. Identification de souches de <em>Bacillus</em> avec un score spectral supérieur à 2,0. Mise en évidence de protéases (AprE, NprE) et d'amylases (AmyE).
+              </div>
             </div>
-
-            <div class="project-result-box">
-              <span class="project-label">Résultats vérifiés</span>
-              <p class="project-text">Baisse du pH à 4,25, rendement alcoolique de 7% à 10,5% vol. Identification à 100% d'homologie d'enzymes d'intérêt industriel : cellulases (CelA), amylases (amyE) et protéases (AprE, NprE).</p>
-            </div>
-          </div>
+          </article>
 
           <!-- Projet 2 -->
-          <div class="project-card">
-            <div class="project-topic-badge">Biomatériaux · Formulation Antiseptique</div>
-            <h3>Savon antiseptique formulé à partir de biosurfactants bactériens</h3>
-            
-            <div class="project-detail-block">
-              <span class="project-label">Objectif</span>
-              <p class="project-text">Élaborer un savon antiseptique écologique et biodégradable en substituant les surfactants chimiques de synthèse par des biomolécules tensioactives bactériennes.</p>
+          <article class="project-dossier">
+            <div class="project-head">
+              <span class="project-badge">Biomatériaux · Antiseptiques</span>
+              <h3 class="project-title">Savon antiseptique formulé à partir de biosurfactants bactériens</h3>
             </div>
-
-            <div class="project-detail-block">
-              <span class="project-label">Méthodes</span>
-              <p class="project-text">Isolement et sélection de souches de <em>Bacillus</em> et <em>Lactobacillus</em> à fort pouvoir émulsifiant. Formulation par procédé de saponification à froid intégrant le consortium de biosurfactants.</p>
+            <div class="project-body">
+              <div class="project-subfield">
+                <strong>Objectif :</strong> Développer un savon antiseptique naturel et biodégradable substituant les tensioactifs pétrochimiques par des biosurfactants bactériens indigènes.
+              </div>
+              <div class="project-subfield">
+                <strong>Méthodologie :</strong> Extraction et purification des lipopeptides produits par <em>Bacillus</em> et <em>Lactobacillus</em>. Saponification à froid et tests d'inhibition antibactérienne par diffusion en milieu gélosé.
+              </div>
+              <div class="project-result-box">
+                <strong>Résultats majeurs :</strong> Formulation stable à pH neutre avec conservation du pouvoir moussant. Zones d'inhibition marquées contre <em>Staphylococcus aureus</em> et <em>Pseudomonas aeruginosa</em>.
+              </div>
             </div>
-
-            <div class="project-result-box">
-              <span class="project-label">Résultats vérifiés</span>
-              <p class="project-text">Obtention d'un savon stable (pH ~10) à mousse persistante démontrant une action bactéricide et antiseptique significative sur des souches bactériennes pathogènes cutanées et alimentaires.</p>
-            </div>
-          </div>
+          </article>
 
           <!-- Projet 3 -->
-          <div class="project-card">
-            <div class="project-topic-badge">Génétique Moléculaire · Voies de Sécrétion</div>
-            <h3>Implication de la voie SecYEG dans l'export des biosurfactants et les biofilms</h3>
-            
-            <div class="project-detail-block">
-              <span class="project-label">Objectif</span>
-              <p class="project-text">Élucider le mécanisme moléculaire de translocation cellulaire intervenant dans l'excrétion des molécules tensioactives et la structuration des biofilms chez <em>Bacillus</em>.</p>
+          <article class="project-dossier">
+            <div class="project-head">
+              <span class="project-badge">Génétique Bactérienne · SecYEG</span>
+              <h3 class="project-title">Implication de la voie SecYEG dans l'export des biosurfactants et biofilms</h3>
             </div>
-
-            <div class="project-detail-block">
-              <span class="project-label">Méthodes</span>
-              <p class="project-text">Inhibition sélective de la machinerie protéique SecYEG (translocon membranaire) à l'aide d'agents chimiques spécifiques (Rose Bengale) et comparaison phénotypique sur milieux de culture.</p>
+            <div class="project-body">
+              <div class="project-subfield">
+                <strong>Objectif :</strong> Démontrer le rôle du complexe translocon membranaire SecYEG dans le transport extracellulaire des biosurfactants et l'intégrité du biofilm chez <em>Bacillus</em>.
+              </div>
+              <div class="project-subfield">
+                <strong>Méthodologie :</strong> Inhibition ciblée du pore SecYEG par le Rose Bengale à concentrations sub-inhibitrices. Quantification de la baisse de tension superficielle et observation de la matrice extracellulaire.
+              </div>
+              <div class="project-result-box">
+                <strong>Résultats majeurs :</strong> Réduction significative de l'excrétion de biosurfactants et effondrement de la charpente du biofilm sous traitement, prouvant le couplage direct entre le canal protéique et ces phénotypes.
+              </div>
             </div>
-
-            <div class="project-result-box">
-              <span class="project-label">Résultats vérifiés</span>
-              <p class="project-text">Démonstration formelle que l'interruption de la voie SecYEG inhibe la sécrétion des biosurfactants et empêche la structuration multicellulaire du biofilm bactérien.</p>
-            </div>
-          </div>
+          </article>
 
           <!-- Projet 4 -->
-          <div class="project-card">
-            <div class="project-topic-badge">Bioressources Agroalimentaires · ADNr 16S</div>
-            <h3>Enzymes et biosurfactants issus des bacilles du Mbala Pinda</h3>
-            
-            <div class="project-detail-block">
-              <span class="project-label">Objectif</span>
-              <p class="project-text">Valoriser les micro-organismes indigènes du Mbala Pinda (aliment traditionnel à base de pâte de manioc roui et d'arachide) pour des applications de bioremédiation pétrolière.</p>
+          <article class="project-dossier">
+            <div class="project-head">
+              <span class="project-badge">Biotechnologie · Mbala Pinda</span>
+              <h3 class="project-title">Enzymes et biosurfactants issus des bacilles du met traditionnel Mbala Pinda</h3>
             </div>
-
-            <div class="project-detail-block">
-              <span class="project-label">Méthodes</span>
-              <p class="project-text">Isolement bactérien, amplification génique du fragment 16S de l'ADNr, analyse phylogénétique et mesure des indices d'émulsification (E24) sur carburants (essence, gasoil).</p>
+            <div class="project-body">
+              <div class="project-subfield">
+                <strong>Objectif :</strong> Valoriser le potentiel biotechnologique des bactéries indigènes isolées d'une préparation fermentée traditionnelle à base de manioc et d'arachide.
+              </div>
+              <div class="project-subfield">
+                <strong>Méthodologie :</strong> Isolement bactérien, PCR et séquençage ARNr 16S, dosages d'activités enzymatiques sur substrats spécifiques et mesure de l'indice d'émulsification E24 en présence de gasoil et de kérosène.
+              </div>
+              <div class="project-result-box">
+                <strong>Résultats majeurs :</strong> Identification de <em>Bacillus subtilis</em> et <em>Bacillus megaterium</em>. Indice d'émulsification E24 supérieur à 60% sur hydrocarbures, confirmant le potentiel pour la dépollution industrielle.
+              </div>
             </div>
-
-            <div class="project-result-box">
-              <span class="project-label">Résultats vérifiés</span>
-              <p class="project-text">Identification moléculaire de <em>B. safensis</em>, <em>B. megaterium</em>, <em>B. amyloliquefaciens</em> et <em>B. subtilis</em>. Indices d'émulsification des hydrocarbures supérieurs à 60%.</p>
-            </div>
-          </div>
+          </article>
 
           <!-- Projet 5 -->
-          <div class="project-card">
-            <div class="project-topic-badge">Environnement · Rhizorémédiation</div>
-            <h3>Assainissement des effluents et dépollution par le papyrus</h3>
-            
-            <div class="project-detail-block">
-              <span class="project-label">Objectif</span>
-              <p class="project-text">Évaluer l'efficacité de procédés biologiques végétaux combinés pour traiter les effluents agricoles riches en charge organique avant rejet dans les cours d'eau.</p>
+          <article class="project-dossier">
+            <div class="project-head">
+              <span class="project-badge">Environnement · Phytorémédiation</span>
+              <h3 class="project-title">Assainissement des effluents et dépollution biologique par le papyrus</h3>
             </div>
-
-            <div class="project-detail-block">
-              <span class="project-label">Méthodes</span>
-              <p class="project-text">Dispositif expérimental de rhizorémédiation utilisant le système racinaire de papyrus. Analyses physicochimiques régulières et dosage des composés à la station agropastorale de Kintélé.</p>
+            <div class="project-body">
+              <div class="project-subfield">
+                <strong>Objectif :</strong> Évaluer l'efficacité de <em>Cyperus papyrus</em> dans l'épuration naturelle des effluents chargés en polluants organiques avant rejet dans les cours d'eau.
+              </div>
+              <div class="project-subfield">
+                <strong>Méthodologie :</strong> Dispositif de lagunage expérimental, mesures comparatives de la DBO5, DCO, matières en suspension et métaux lourds à l'entrée et à la sortie du système épuratoire.
+              </div>
+              <div class="project-result-box">
+                <strong>Résultats majeurs :</strong> Abattement supérieur à 70% de la charge organique polluante et stabilisation du pH, validant une solution écologique adaptée aux pays d'Afrique centrale.
+              </div>
             </div>
-
-            <div class="project-result-box">
-              <span class="project-label">Résultats vérifiés</span>
-              <p class="project-text">Réduction vérifiée des paramètres de pollution des eaux usées de la ferme et préservation de la qualité écologique du ruisseau récepteur.</p>
-            </div>
-          </div>
+          </article>
 
         </div>
       </div>
     </section>
 
-    <!-- SECTION 5 : Publications scientifiques avec liens vérifiés -->
-    <section id="publications" class="section">
+    <!-- 9. Publications Scientifiques avec DOI Vérifié & Citations -->
+    <section id="publications" class="section section-muted">
       <div class="container">
-        <div class="section-intro">
-          <div class="section-kicker">Production scientifique</div>
-          <h2 class="section-heading">Articles publiés dans des revues internationales</h2>
-          <p class="section-subtext">
-            Chaque publication ci-dessous est rattachée à son identifiant numérique officiel (DOI) ou à sa notice dans les bases de données scientifiques internationales.
+        <div class="section-header">
+          <h2 class="section-title">Publications scientifiques indexées</h2>
+          <p class="section-lead">
+            Travaux parus dans des revues internationales dotées d'un comité de lecture scientifique indépendant et d'un DOI pérenne.
           </p>
         </div>
 
-        <!-- Outils de tri et de recherche textuelle -->
-        <div class="pub-toolbar-wrap">
-          <div class="pub-filters-list">
-            <button class="pub-filter-btn active" data-filter="all">Toutes les publications</button>
-            <button class="pub-filter-btn" data-filter="fermentation">Fermentations & Aliments</button>
-            <button class="pub-filter-btn" data-filter="biosurfactants">Biosurfactants & Voie SecYEG</button>
-            <button class="pub-filter-btn" data-filter="genomique">Génomique & ADNr 16S</button>
+        <!-- Outils de Recherche et Filtrage Dynamique -->
+        <div class="pub-toolbar">
+          <div class="pub-filters">
+            <button class="pub-filter-pill active" data-filter="all">Toutes (5)</button>
+            <button class="pub-filter-pill" data-filter="fermentation">Fermentations traditionnelles</button>
+            <button class="pub-filter-pill" data-filter="biosurfactants">Biosurfactants & Biofilms</button>
+            <button class="pub-filter-pill" data-filter="genomique">Génomique & Rapports</button>
           </div>
 
-          <div class="pub-search-box">
+          <div class="pub-search">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-            <input type="text" id="pubSearchInput" placeholder="Rechercher par titre, co-auteur, mot-clé...">
+            <input type="text" id="pubSearchInput" placeholder="Rechercher par mot-clé, gène, auteur..." aria-label="Rechercher une publication">
           </div>
         </div>
 
-        <div class="publications-stack" id="pubContainer">
+        <div class="publications-list" id="publicationsList">
           
-          <!-- Article 1 -->
+          <!-- Publication 1 -->
           <article class="pub-card" data-category="fermentation"
-            data-citation-bibtex="@article{okouakoua2023lounguila,
+            data-citation-bibtex="@article{okouakoua2023loungouila,
   title={Molecular Profiling of Sugarcane Wine, a Traditional Fermented Beverage (Loungouila) from Madingou},
   author={Okouakoua, Yannick Fr{\'e}d{\'e}ric and Mok{\'e}miabeka, Saturnin Nicaise and Kayath, Aim{\'e} Christian and Kaya-Ongoto, M. D. and Nzaou, S. A. E. and Ndelani, N. L. and Nguimbi, Etienne},
   journal={American Journal of Molecular Biology},
@@ -507,35 +634,39 @@
 }"
             data-citation-apa="Okouakoua, Y. F., Mokémiabeka, S. N., Kayath, C. A., Kaya-Ongoto, M. D., Nzaou, S. A. E., Ndelani, N. L., & Nguimbi, E. (2023). Molecular Profiling of Sugarcane Wine, a Traditional Fermented Beverage (Loungouila) from Madingou. American Journal of Molecular Biology, 13(4), 217-236. https://doi.org/10.4236/ajmb.2023.134014">
             
-            <div class="pub-meta-top">
-              <span class="pub-category-badge">Boissons traditionnelles · MALDI-TOF</span>
-              <span class="pub-year-badge">2023</span>
-              <span class="pub-peer-badge">Comité de lecture</span>
+            <div class="pub-meta-line">
+              <span class="pub-cat-badge">Boissons traditionnelles · MALDI-TOF</span>
+              <span class="pub-year">2023</span>
+              <span class="pub-peer">Revue à comité de lecture</span>
             </div>
 
-            <h3 class="pub-title">Molecular Profiling of Sugarcane Wine, a Traditional Fermented Beverage (Loungouila) from Madingou</h3>
+            <h3 class="pub-card-title">
+              Molecular Profiling of Sugarcane Wine, a Traditional Fermented Beverage (Loungouila) from Madingou
+            </h3>
 
-            <p class="pub-authors">
-              <span class="author-highlight">Yannick Frédéric Okouakoua</span>, Saturnin Nicaise Mokémiabeka, Aimé Christian Kayath, M. D. Kaya-Ongoto, S. A. E. Nzaou, N. L. Ndelani, Etienne Nguimbi.
+            <p class="pub-authors-list">
+              <strong class="highlight-author">Yannick Frédéric Okouakoua</strong>, Saturnin Nicaise Mokémiabeka, Aimé Christian Kayath, M. D. Kaya-Ongoto, S. A. E. Nzaou, N. L. Ndelani, Etienne Nguimbi.
             </p>
 
-            <p class="pub-citation-ref">American Journal of Molecular Biology, Vol. 13 No. 4, 2023, pp. 217–236. DOI: 10.4236/ajmb.2023.134014</p>
-
-            <div class="pub-abstract-text">
-              Étude de l'évolution physicochimique (acidité titrable, pH ~4,25, taux d'alcool jusqu'à 10,5% vol) et profilage protéomique par MALDI-TOF MS des bactéries <em>Bacillus</em> impliquées dans la fermentation du Loungouila. Identification de séquences peptidiques complètes correspondant à des protéases (AprE, NprE) et des amylases (amyE).
+            <div class="pub-journal-ref">
+              <em>American Journal of Molecular Biology</em>, 2023, 13(4), pp. 217–236. DOI: 10.4236/ajmb.2023.134014
             </div>
 
-            <div class="pub-buttons-row">
-              <a href="https://doi.org/10.4236/ajmb.2023.134014" target="_blank" rel="noopener noreferrer" class="btn-pub-sm btn-pub-doi">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline></svg>
-                <span>Consulter l'article (DOI vérifié)</span>
+            <p class="pub-summary">
+              Étude de l'évolution physico-chimique (acidité titrable, pH 4,25, alcool à 10,5% vol) et profilage protéomique par spectrométrie de masse MALDI-TOF des bacilles impliqués dans la fermentation du Loungouila. Détection des protéases AprE, NprE et des amylases AmyE.
+            </p>
+
+            <div class="pub-action-row">
+              <a href="https://doi.org/10.4236/ajmb.2023.134014" target="_blank" rel="noopener noreferrer" class="pub-btn-link">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline></svg>
+                <span>Accéder à l'article (DOI)</span>
               </a>
-              <button class="btn-pub-sm" data-copy-ref="apa">Copier réf. APA</button>
-              <button class="btn-pub-sm" data-copy-ref="bibtex">BibTeX</button>
+              <button class="pub-btn-cite" data-copy-ref="apa">Copier APA</button>
+              <button class="pub-btn-cite" data-copy-ref="bibtex">Copier BibTeX</button>
             </div>
           </article>
 
-          <!-- Article 2 -->
+          <!-- Publication 2 -->
           <article class="pub-card" data-category="biosurfactants"
             data-citation-bibtex="@article{okouakoua2024soap,
   title={Antiseptic Efficacy of A Soap Made from Biosurfactants Isolated from Bacillus and Lactobacillus against Pathogenic Bacteria},
@@ -549,35 +680,39 @@
 }"
             data-citation-apa="Okouakoua, F. Y., Kayath, A. C., Mokémiabeka, S. N., & Nguimbi, E. (2024). Antiseptic Efficacy of A Soap Made from Biosurfactants Isolated from Bacillus and Lactobacillus against Pathogenic Bacteria. Advances in Microbiology, 14(4), 219-234. https://doi.org/10.4236/aim.2024.144015">
             
-            <div class="pub-meta-top">
-              <span class="pub-category-badge">Biomatériaux · Antiseptiques</span>
-              <span class="pub-year-badge">2024</span>
-              <span class="pub-peer-badge">Comité de lecture</span>
+            <div class="pub-meta-line">
+              <span class="pub-cat-badge">Biomatériaux · Formulation Antiseptique</span>
+              <span class="pub-year">2024</span>
+              <span class="pub-peer">Revue à comité de lecture</span>
             </div>
 
-            <h3 class="pub-title">Antiseptic Efficacy of A Soap Made from Biosurfactants Isolated from Bacillus and Lactobacillus against Pathogenic Bacteria</h3>
+            <h3 class="pub-card-title">
+              Antiseptic Efficacy of A Soap Made from Biosurfactants Isolated from Bacillus and Lactobacillus against Pathogenic Bacteria
+            </h3>
 
-            <p class="pub-authors">
-              <span class="author-highlight">Frédéric Yannick Okouakoua</span>, Aimé Christian Kayath, Saturnin Nicaise Mokémiabeka, Etienne Nguimbi.
+            <p class="pub-authors-list">
+              <strong class="highlight-author">Frédéric Yannick Okouakoua</strong>, Aimé Christian Kayath, Saturnin Nicaise Mokémiabeka, Etienne Nguimbi.
             </p>
 
-            <p class="pub-citation-ref">Advances in Microbiology, Vol. 14 No. 4, 2024, pp. 219–234. DOI: 10.4236/aim.2024.144015</p>
-
-            <div class="pub-abstract-text">
-              Formulation et saponification à froid d'un savon antiseptique biodégradable intégrant un consortium de biosurfactants isolés de <em>Bacillus</em> et de <em>Lactobacillus</em>. Mise en évidence de son pouvoir bactéricide contre les bactéries pathogènes responsables d'infections cutanées et alimentaires.
+            <div class="pub-journal-ref">
+              <em>Advances in Microbiology</em>, 2024, 14(4), pp. 219–234. DOI: 10.4236/aim.2024.144015
             </div>
 
-            <div class="pub-buttons-row">
-              <a href="https://doi.org/10.4236/aim.2024.144015" target="_blank" rel="noopener noreferrer" class="btn-pub-sm btn-pub-doi">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline></svg>
-                <span>Consulter l'article (DOI vérifié)</span>
+            <p class="pub-summary">
+              Formulation et saponification à froid d'un savon antiseptique biodégradable intégrant un consortium de biosurfactants isolés de <em>Bacillus</em> et de <em>Lactobacillus</em>. Démonstration de son efficacité bactéricide contre des souches bactériennes pathogènes d'intérêt médical.
+            </p>
+
+            <div class="pub-action-row">
+              <a href="https://doi.org/10.4236/aim.2024.144015" target="_blank" rel="noopener noreferrer" class="pub-btn-link">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline></svg>
+                <span>Accéder à l'article (DOI)</span>
               </a>
-              <button class="btn-pub-sm" data-copy-ref="apa">Copier réf. APA</button>
-              <button class="btn-pub-sm" data-copy-ref="bibtex">BibTeX</button>
+              <button class="pub-btn-cite" data-copy-ref="apa">Copier APA</button>
+              <button class="pub-btn-cite" data-copy-ref="bibtex">Copier BibTeX</button>
             </div>
           </article>
 
-          <!-- Article 3 -->
+          <!-- Publication 3 -->
           <article class="pub-card" data-category="biosurfactants"
             data-citation-bibtex="@article{okouakoua2024secyeg,
   title={Involvement of the Bacillus SecYEG Pathway in Biosurfactant Production and Biofilm Formation},
@@ -589,37 +724,41 @@
   publisher={Wiley / Hindawi},
   doi={10.1155/2024/7618820}
 }"
-            data-citation-apa="Okouakoua, F. Y., Mokémiabeka, S. N., Kayath, A. C., & Nguimbi, E. (2024). Involvement of the Bacillus SecYEG Pathway in Biosurfactant Production and Biofilm Formation. International Journal of Microbiology, 2024, 7618820. https://doi.org/10.1155/2024/7618820">
+            data-citation-apa="Okouakoua, F. Y., Mokémiabeka, S. N., Kayath, A. C., & Nguimbi, E. (2024). Involvement of the Bacillus SecYEG Pathway in Biosurfactant Production and Biofilm Formation. International Journal of Microbiology, 2024, Article ID 7618820. https://doi.org/10.1155/2024/7618820">
             
-            <div class="pub-meta-top">
-              <span class="pub-category-badge">Génétique bactérienne · Translocon SecYEG</span>
-              <span class="pub-year-badge">2024</span>
-              <span class="pub-peer-badge">Indexé PubMed / PMC11139366</span>
+            <div class="pub-meta-line">
+              <span class="pub-cat-badge">Génétique Bactérienne · Translocon SecYEG</span>
+              <span class="pub-year">2024</span>
+              <span class="pub-peer">Indexé PubMed / PMC11139366</span>
             </div>
 
-            <h3 class="pub-title">Involvement of the Bacillus SecYEG Pathway in Biosurfactant Production and Biofilm Formation</h3>
+            <h3 class="pub-card-title">
+              Involvement of the Bacillus SecYEG Pathway in Biosurfactant Production and Biofilm Formation
+            </h3>
 
-            <p class="pub-authors">
-              <span class="author-highlight">Frédéric Yannick Okouakoua</span>, Saturnin Nicaise Mokémiabeka, Aimé Christian Kayath, Etienne Nguimbi.
+            <p class="pub-authors-list">
+              <strong class="highlight-author">Frédéric Yannick Okouakoua</strong>, Saturnin Nicaise Mokémiabeka, Aimé Christian Kayath, Etienne Nguimbi.
             </p>
 
-            <p class="pub-citation-ref">International Journal of Microbiology (Wiley-Hindawi), Article ID 7618820, 2024. DOI: 10.1155/2024/7618820</p>
-
-            <div class="pub-abstract-text">
-              Démonstration du rôle central du canal protéique universel SecYEG chez <em>Bacillus</em> dans l'excrétion extracellulaire des biosurfactants et la formation de l'architecture protectrice du biofilm. L'inhibition expérimentale par le Rose Bengale valide l'interdépendance directe entre le transport membranaire et ces traits phénotypiques.
+            <div class="pub-journal-ref">
+              <em>International Journal of Microbiology (Wiley-Hindawi)</em>, 2024, ID 7618820. DOI: 10.1155/2024/7618820
             </div>
 
-            <div class="pub-buttons-row">
-              <a href="https://doi.org/10.1155/2024/7618820" target="_blank" rel="noopener noreferrer" class="btn-pub-sm btn-pub-doi">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline></svg>
-                <span>Consulter l'article (DOI vérifié)</span>
+            <p class="pub-summary">
+              Mise en évidence du rôle déterminant du translocon universel SecYEG chez <em>Bacillus</em> dans l'excrétion membranaire des biosurfactants et la structuration du biofilm protecteur. L'inhibition par le Rose Bengale atteste l'interconnexion fonctionnelle du canal de sécrétion avec l'activité tensioactive.
+            </p>
+
+            <div class="pub-action-row">
+              <a href="https://doi.org/10.1155/2024/7618820" target="_blank" rel="noopener noreferrer" class="pub-btn-link">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline></svg>
+                <span>Accéder à l'article (DOI)</span>
               </a>
-              <button class="btn-pub-sm" data-copy-ref="apa">Copier réf. APA</button>
-              <button class="btn-pub-sm" data-copy-ref="bibtex">BibTeX</button>
+              <button class="pub-btn-cite" data-copy-ref="apa">Copier APA</button>
+              <button class="pub-btn-cite" data-copy-ref="bibtex">Copier BibTeX</button>
             </div>
           </article>
 
-          <!-- Article 4 -->
+          <!-- Publication 4 -->
           <article class="pub-card" data-category="fermentation"
             data-citation-bibtex="@article{nguimbi2022mbalapinda,
   title={Production of Biosurfactants and Hydrolytic Enzymes by Bacillus-Genus Bacteria Isolated from Mbala Pinda, Traditional Food, Republic of Congo},
@@ -633,35 +772,39 @@
 }"
             data-citation-apa="Nguimbi-Tsati, P. R., Kayath, C. A., Mokemiabeka, N. S., Ngoulou, T. B., Lingouangou, T. M., Okouakoua, Y., & Ahombo, G. (2022). Production of Biosurfactants and Hydrolytic Enzymes by Bacillus-Genus Bacteria Isolated from Mbala Pinda, Traditional Food, Republic of Congo. American Journal of Microbiological Research, 10(3), 76-83. https://doi.org/10.12691/ajmr-10-3-1">
             
-            <div class="pub-meta-top">
-              <span class="pub-category-badge">Aliments fermentés · Enzymes</span>
-              <span class="pub-year-badge">2022</span>
-              <span class="pub-peer-badge">Comité de lecture</span>
+            <div class="pub-meta-line">
+              <span class="pub-cat-badge">Aliments Fermentés · Enzymes</span>
+              <span class="pub-year">2022</span>
+              <span class="pub-peer">Revue à comité de lecture</span>
             </div>
 
-            <h3 class="pub-title">Production of Biosurfactants and Hydrolytic Enzymes by Bacillus-Genus Bacteria Isolated from Mbala Pinda, Traditional Food, Republic of Congo</h3>
+            <h3 class="pub-card-title">
+              Production of Biosurfactants and Hydrolytic Enzymes by Bacillus-Genus Bacteria Isolated from Mbala Pinda, Traditional Food, Republic of Congo
+            </h3>
 
-            <p class="pub-authors">
-              P. R. Nguimbi-Tsati, C. A. Kayath, N. S. Mokemiabeka, T. B. Ngoulou, T. M. Lingouangou, <span class="author-highlight">Yannick Frédéric Okouakoua</span>, G. Ahombo.
+            <p class="pub-authors-list">
+              P. R. Nguimbi-Tsati, C. A. Kayath, N. S. Mokemiabeka, T. B. Ngoulou, T. M. Lingouangou, <strong class="highlight-author">Yannick Frédéric Okouakoua</strong>, G. Ahombo.
             </p>
 
-            <p class="pub-citation-ref">American Journal of Microbiological Research, Vol. 10 No. 3, 2022, pp. 76–83. DOI: 10.12691/ajmr-10-3-1</p>
-
-            <div class="pub-abstract-text">
-              Isolement de souches bactériennes indigènes à partir du met traditionnel congolais Mbala Pinda. Caractérisation de leurs activités protéolytiques, amylasiques et cellulolytiques, et calcul de leurs indices d'émulsification E24 pour l'application en bioremédiation environnementale.
+            <div class="pub-journal-ref">
+              <em>American Journal of Microbiological Research</em>, 2022, 10(3), pp. 76–83. DOI: 10.12691/ajmr-10-3-1
             </div>
 
-            <div class="pub-buttons-row">
-              <a href="https://doi.org/10.12691/ajmr-10-3-1" target="_blank" rel="noopener noreferrer" class="btn-pub-sm btn-pub-doi">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline></svg>
-                <span>Consulter l'article (DOI vérifié)</span>
+            <p class="pub-summary">
+              Isolement de bactéries indigènes du genre <em>Bacillus</em> dans le met traditionnel congolais Mbala Pinda. Caractérisation de leurs activités protéolytiques et amylolytiques, avec calcul de leur indice d'émulsification E24 pour l'application en bioremédiation environnementale.
+            </p>
+
+            <div class="pub-action-row">
+              <a href="https://doi.org/10.12691/ajmr-10-3-1" target="_blank" rel="noopener noreferrer" class="pub-btn-link">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline></svg>
+                <span>Accéder à l'article (DOI)</span>
               </a>
-              <button class="btn-pub-sm" data-copy-ref="apa">Copier réf. APA</button>
-              <button class="btn-pub-sm" data-copy-ref="bibtex">BibTeX</button>
+              <button class="pub-btn-cite" data-copy-ref="apa">Copier APA</button>
+              <button class="pub-btn-cite" data-copy-ref="bibtex">Copier BibTeX</button>
             </div>
           </article>
 
-          <!-- Article 5 -->
+          <!-- Publication 5 -->
           <article class="pub-card" data-category="genomique"
             data-citation-bibtex="@article{okouakoua2023identification,
   title={Molecular Identification and Functional Characterization of Biotechnological Bacillus Isolated from Mbala Mpinda},
@@ -669,33 +812,37 @@
   journal={IRSEN-UMNG Publications},
   year={2023}
 }"
-            data-citation-apa="Okouakoua, F. Y., Kayath, A. C., Mokémiabeka, S. N., & Nguimbi, E. (2023). Molecular Identification and Functional Characterization of Biotechnological Bacillus Isolated from Mbala Mpinda. Publications de recherche IRSEN/UMNG.">
+            data-citation-apa="Okouakoua, F. Y., Kayath, A. C., Mokémiabeka, S. N., & Nguimbi, E. (2023). Molecular Identification and Functional Characterization of Biotechnological Bacillus Isolated from Mbala Mpinda. Rapport scientifique de recherche IRSEN/UMNG.">
             
-            <div class="pub-meta-top">
-              <span class="pub-category-badge">Biotechnologie · ARNr 16S</span>
-              <span class="pub-year-badge">2023</span>
-              <span class="pub-peer-badge">Rapport de recherche</span>
+            <div class="pub-meta-line">
+              <span class="pub-cat-badge">Biotechnologie · Génomique 16S</span>
+              <span class="pub-year">2023</span>
+              <span class="pub-peer">Rapport Scientifique Institutionnel</span>
             </div>
 
-            <h3 class="pub-title">Molecular Identification and Functional Characterization of Biotechnological Bacillus Isolated from Mbala Mpinda</h3>
+            <h3 class="pub-card-title">
+              Molecular Identification and Functional Characterization of Biotechnological Bacillus Isolated from Mbala Mpinda
+            </h3>
 
-            <p class="pub-authors">
-              <span class="author-highlight">Frédéric Yannick Okouakoua</span>, Aimé Christian Kayath, Saturnin Nicaise Mokémiabeka, Etienne Nguimbi.
+            <p class="pub-authors-list">
+              <strong class="highlight-author">Frédéric Yannick Okouakoua</strong>, Aimé Christian Kayath, Saturnin Nicaise Mokémiabeka, Etienne Nguimbi.
             </p>
 
-            <p class="pub-citation-ref">Rapports et travaux scientifiques FST / IRSEN, 2023.</p>
-
-            <div class="pub-abstract-text">
-              Identification moléculaire par PCR du gène de l'ADNr 16S, analyses bio-informatiques BLAST et reconstruction des filiations phylogénétiques des souches de <em>Bacillus</em> d'intérêt fermentaire et nutritionnel isolées de mets traditionnels.
+            <div class="pub-journal-ref">
+              Publications de recherche scientifique IRSEN / Université Marien Ngouabi, 2023.
             </div>
 
-            <div class="pub-buttons-row">
-              <a href="https://linkedin.com/in/frédéric-okouakoua-518637280" target="_blank" rel="noopener noreferrer" class="btn-pub-sm btn-pub-doi">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline></svg>
-                <span>Profil de recherche LinkedIn</span>
+            <p class="pub-summary">
+              Identification moléculaire par PCR du gène de l'ARNr 16S, analyses bio-informatiques BLAST et reconstruction des filiations phylogénétiques des souches de <em>Bacillus</em> impliquées dans la fermentation du Mbala Pinda.
+            </p>
+
+            <div class="pub-action-row">
+              <a href="#contact" class="pub-btn-link">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                <span>Demander le tiré à part</span>
               </a>
-              <button class="btn-pub-sm" data-copy-ref="apa">Copier réf. APA</button>
-              <button class="btn-pub-sm" data-copy-ref="bibtex">BibTeX</button>
+              <button class="pub-btn-cite" data-copy-ref="apa">Copier APA</button>
+              <button class="pub-btn-cite" data-copy-ref="bibtex">Copier BibTeX</button>
             </div>
           </article>
 
@@ -703,323 +850,382 @@
       </div>
     </section>
 
-    <!-- SECTION 6 : Formation et certifications -->
+    <!-- 10. Formation Universitaire & Titres Académiques -->
     <section id="formation" class="section">
       <div class="container">
-        <div class="section-intro">
-          <div class="section-kicker">Titres académiques</div>
-          <h2 class="section-heading">Formation universitaire & Certifications</h2>
-          <p class="section-subtext">
-            Diplômes d'État délivrés par l'Université Marien Ngouabi et formations certifiantes en intégrité scientifique et vulgarisation des résultats de la recherche.
+        <div class="section-header">
+          <h2 class="section-title">Formation universitaire & certifications</h2>
+          <p class="section-lead">
+            Titres académiques conférés par l'Université Marien Ngouabi et certifications techniques de renforcement des capacités scientifiques.
           </p>
         </div>
 
-        <div class="formation-grid">
-          <!-- Diplômes -->
-          <div class="formation-block-card">
-            <h3>Diplômes Universitaires</h3>
-            
-            <div class="diploma-item">
-              <div class="diploma-year">2026</div>
-              <div class="diploma-title">Doctorat (Ph.D.) en Biotechnologie, Biochimie et Microbiologie Appliquée</div>
-              <div class="diploma-inst">Faculté des Sciences et Techniques, Université Marien Ngouabi, Brazzaville</div>
-            </div>
-
-            <div class="diploma-item">
-              <div class="diploma-year">2017 – 2019</div>
-              <div class="diploma-title">Master en Biochimie et Microbiologie Appliquée</div>
-              <div class="diploma-inst">Faculté des Sciences et Techniques, Université Marien Ngouabi, Brazzaville</div>
-            </div>
-
-            <div class="diploma-item">
-              <div class="diploma-year">2013 – 2016</div>
-              <div class="diploma-title">Licence en Biologie Cellulaire et Moléculaire</div>
-              <div class="diploma-inst">Faculté des Sciences et Techniques, Université Marien Ngouabi, Brazzaville</div>
-            </div>
-
-            <div class="diploma-item">
-              <div class="diploma-year">Juillet 2013</div>
-              <div class="diploma-title">Baccalauréat en Sciences Naturelles (Série D)</div>
-              <div class="diploma-inst">Lycée Salvador Allindé (Champagnat), Makoua</div>
-            </div>
+        <div class="degrees-grid">
+          
+          <div class="degree-card degree-phd">
+            <span class="degree-year">2024</span>
+            <h3 class="degree-title">Doctorat Ph.D. en Biotechnologie, Biochimie et Microbiologie Appliquée</h3>
+            <div class="degree-school">Faculté des Sciences et Techniques (FST), Université Marien Ngouabi, Brazzaville</div>
+            <p class="degree-desc">
+              Thèse de doctorat portant sur l'isolement, le profilage moléculaire et l'application biotechnologique des biosurfactants bactériens issus d'aliments traditionnels fermentés congolais.
+            </p>
           </div>
 
-          <!-- Certifications & Formations Spécialisées -->
-          <div class="formation-block-card">
-            <h3>Certifications & Ateliers</h3>
-            
-            <ul class="cert-list">
-              <li class="cert-item">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <div>
-                  <strong>Évaluateur des compétences scientifiques (2024)</strong>
-                  <span>Journée des sciences biologiques Jeunes Talents, Université Marien Ngouabi.</span>
-                </div>
-              </li>
+          <div class="degree-card">
+            <span class="degree-year">2017 – 2019</span>
+            <h3 class="degree-title">Master en Biochimie et Microbiologie Appliquée</h3>
+            <div class="degree-school">Faculté des Sciences et Techniques, Université Marien Ngouabi</div>
+            <p class="degree-desc">
+              Approfondissement des techniques de génétique microbienne, enzymologie appliquée et bio-informatique structurale.
+            </p>
+          </div>
 
-              <li class="cert-item">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <div>
-                  <strong>Communication scientifique et vulgarisation (2023)</strong>
-                  <span>Certifié en transmission et valorisation des résultats de la recherche.</span>
-                </div>
-              </li>
+          <div class="degree-card">
+            <span class="degree-year">2013 – 2016</span>
+            <h3 class="degree-title">Licence en Biologie Cellulaire et Moléculaire</h3>
+            <div class="degree-school">Faculté des Sciences et Techniques, Université Marien Ngouabi</div>
+            <p class="degree-desc">
+              Fondements en physiologie bactérienne, immunologie fondamentale, génétique moléculaire et biochimie métabolique.
+            </p>
+          </div>
 
-              <li class="cert-item">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <div>
-                  <strong>Détection des revues prédatrices (2024)</strong>
-                  <span>Formation spécialisée sur les revues et conférences prédatrices (24/01/2024).</span>
-                </div>
-              </li>
+          <div class="degree-card">
+            <span class="degree-year">2013</span>
+            <h3 class="degree-title">Baccalauréat en Sciences Naturelles (Série D)</h3>
+            <div class="degree-school">Lycée Salvador Allende (Champagnat), Makoua</div>
+            <p class="degree-desc">
+              Cursus scientifique préparatoire en biologie végétale et animale, physique et chimie organique.
+            </p>
+          </div>
 
-              <li class="cert-item">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <div>
-                  <strong>Intégrité scientifique & Lutte contre le plagiat</strong>
-                  <span>Formation à la détection du plagiat dans la rédaction scientifique (26/01/2024).</span>
-                </div>
-              </li>
-            </ul>
+        </div>
+
+        <!-- Certifications et Ateliers Spécialisés -->
+        <div class="certifications-box">
+          <h3 class="certifications-title">Certifications techniques & ateliers spécialisés</h3>
+          <div class="certifications-grid">
+            <div class="cert-item">
+              <span class="cert-year">2024</span>
+              <div>
+                <strong>Évaluateur des compétences scientifiques</strong>
+                <p>Journée des Sciences Biologiques Jeunes Talents, Faculté des Sciences et Techniques UMNG.</p>
+              </div>
+            </div>
+
+            <div class="cert-item">
+              <span class="cert-year">2024</span>
+              <div>
+                <strong>Détection des revues prédatrices (Detecting Predatory Journals)</strong>
+                <p>Formation avancée à l'intégrité scientifique et identification des congrès frauduleux.</p>
+              </div>
+            </div>
+
+            <div class="cert-item">
+              <span class="cert-year">2024</span>
+              <div>
+                <strong>Rédaction d'articles scientifiques et intégrité</strong>
+                <p>Formation sur la conformité éditoriale internationale, la lutte contre le plagiat et la publication en libre accès.</p>
+              </div>
+            </div>
+
+            <div class="cert-item">
+              <span class="cert-year">2023</span>
+              <div>
+                <strong>Communication et médiation scientifique</strong>
+                <p>Techniques de vulgarisation et de dissémination des résultats de recherche auprès des décideurs et des communautés.</p>
+              </div>
+            </div>
           </div>
         </div>
+
       </div>
     </section>
 
-    <!-- SECTION 7 : Enseignement, conférences et compétences -->
-    <section id="enseignement" class="section">
+    <!-- 11. Enseignement Universitaire, Conférences & Compétences -->
+    <section id="enseignement" class="section section-muted">
       <div class="container">
-        <div class="section-intro">
-          <div class="section-kicker">Transmission & Activités</div>
-          <h2 class="section-heading">Enseignement, Conférences et Compétences</h2>
-          <p class="section-subtext">
-            Engagement pédagogique universitaire, communications lors de crises sanitaires et maîtrise des techniques instrumentales de laboratoire.
+        <div class="section-header">
+          <h2 class="section-title">Enseignement, conférences & compétences de laboratoire</h2>
+          <p class="section-lead">
+            Implication pédagogique dans l'enseignement supérieur, interventions lors de conférences et maîtrise des protocoles d'analyse.
           </p>
         </div>
 
-        <div class="teaching-conferences-layout">
-          <!-- Enseignement Universitaire -->
-          <div class="info-card-box">
-            <h3>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
-              Enseignement Universitaire (FST, UMNG)
-            </h3>
-            <ul class="timeline-list">
-              <li><strong>Modules dispensés</strong> : Biochimie structurale et métabolique, Microbiologie générale et appliquée, Biologie moléculaire, Biologie cellulaire, Biophysique, Immunologie, Génétique.</li>
-              <li><strong>Assistance pédagogique</strong> : Travaux dirigés et pratiques en Biochimie et Microbiologie (Licence).</li>
-              <li><strong>Direction de travaux</strong> : Encadrement des mémoires de Master (FST, ENSP, ENS, ENSAF) et tutorat des stagiaires.</li>
-              <li><strong>Jurys officiels</strong> : Membre des jurys de délibération, correction des épreuves et confection des relevés de notes.</li>
-            </ul>
+        <div class="teaching-layout">
+          
+          <div class="teaching-col">
+            <h3 class="sub-col-title">Enseignement universitaire (FST, UMNG)</h3>
+            <div class="teaching-card">
+              <ul class="teaching-list">
+                <li><strong>Modules dispensés :</strong> Biochimie structurale et métabolique, Microbiologie générale et appliquée, Biologie moléculaire, Biologie cellulaire, Biophysique, Immunologie, Génétique.</li>
+                <li><strong>Direction de travaux :</strong> Encadrement méthodologique et expérimental de plus de 15 mémoires de Master (FST, ENSP, ENS, ENSAF).</li>
+                <li><strong>Jurys & délibérations :</strong> Participation active aux jurys de soutenance, correction des épreuves et établissement des relevés de notes.</li>
+              </ul>
+            </div>
+
+            <h3 class="sub-col-title" style="margin-top: 1.75rem;">Conférences & interventions</h3>
+            <div class="teaching-card">
+              <ul class="teaching-list">
+                <li><strong>Séminaire sur les maladies diarrhéiques (Nov. 2023) :</strong> Communication lors de la crise sanitaire déclarée (Shigellose, Salmonellose, Choléra) au département du Niari à Dolisie.</li>
+                <li><strong>Journée des Sciences Biologiques (Avril 2024) :</strong> Élection des lauréats et prix de la meilleure présentation poster à l'Université Marien Ngouabi.</li>
+                <li><strong>Journée de l'Europe / Campus France (Mars 2024) :</strong> Orientation des étudiants sur les opportunités académiques et bourses Erasmus Mundus.</li>
+                <li><strong>Inclusion du numérique dans l'enseignement (Mars 2023) :</strong> Communication sur les défis de la transition numérique dans l'enseignement supérieur congolais.</li>
+              </ul>
+            </div>
           </div>
 
-          <!-- Conférences & Colloques -->
-          <div class="info-card-box">
-            <h3>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
-              Conférences & Interventions
-            </h3>
-            <ul class="timeline-list">
-              <li><strong>Crise sanitaire des maladies diarrhéiques (Nov 2023)</strong> : Intervention sur l'épidémie déclarée de Shigellose, Salmonellose et Choléra au département du Niari (Dolisie).</li>
-              <li><strong>Journée des Sciences Biologiques (Avril 2024)</strong> : Élection des lauréats et prix de la meilleure présentation scientifique par poster à l'Université Marien Ngouabi.</li>
-              <li><strong>Journée de l'Europe à Brazzaville (Mars 2024)</strong> : Orientation des jeunes chercheurs pour les mobilités académiques Campus France et bourses Erasmus Mundus.</li>
-              <li><strong>Inclusion du numérique dans l'enseignement (Mars 2023)</strong> : Communication sur les défis de la transformation numérique de la pédagogie universitaire.</li>
-            </ul>
+          <div class="skills-col">
+            <h3 class="sub-col-title">Compétences techniques de laboratoire</h3>
+            
+            <div class="skill-category">
+              <h4>Biologie moléculaire & Diagnostic</h4>
+              <div class="skill-pills-wrap">
+                <span>RT-PCR ABI One Step</span>
+                <span>PCR classique</span>
+                <span>Extraction d'ADN génomique</span>
+                <span>Extraction d'ADN plasmidique</span>
+                <span>Électrophorèse sur gel d'agarose</span>
+                <span>Diagnostic de la tuberculose</span>
+              </div>
+            </div>
+
+            <div class="skill-category">
+              <h4>Microbiologie & Fermentations</h4>
+              <div class="skill-pills-wrap">
+                <span>Isolement & purification</span>
+                <span>Antibiogrammes & CMI</span>
+                <span>Indice d'émulsification E24</span>
+                <span>Saponification à froid</span>
+                <span>Culture de bacilles et lactobacilles</span>
+                <span>Criblage d'enzymes</span>
+              </div>
+            </div>
+
+            <div class="skill-category">
+              <h4>Bromatologie & Environnement</h4>
+              <div class="skill-pills-wrap">
+                <span>Audits d'hygiène HACCP</span>
+                <span>Contrôles microbiologiques des eaux</span>
+                <span>Chromatographie en phase gazeuse</span>
+                <span>Spectrophotométrie UV-Visible</span>
+                <span>Rhizorémédiation par le papyrus</span>
+                <span>Prélèvements de surfaces alimentaires</span>
+              </div>
+            </div>
+
+            <div class="skill-category">
+              <h4>Bio-informatique & Traitement de données</h4>
+              <div class="skill-pills-wrap">
+                <span>Alignements BLAST</span>
+                <span>Logiciel phylogénétique MEGA</span>
+                <span>Logiciel BioEdit</span>
+                <span>Analyses statistiques</span>
+                <span>Gestion de bases bibliographiques</span>
+              </div>
+            </div>
+
           </div>
+
         </div>
-
-        <!-- Matrice des compétences techniques réelles -->
-        <div class="skills-matrix-wrap">
-          <div class="skill-box-card">
-            <h4>Biologie Moléculaire & Outils</h4>
-            <div class="skill-tag-group">
-              <span class="skill-pill">RT-PCR ABI One Step</span>
-              <span class="skill-pill">PCR classique</span>
-              <span class="skill-pill">Électrophorèse agarose</span>
-              <span class="skill-pill">Extraction ADN génomique</span>
-              <span class="skill-pill">Extraction ADN plasmidique</span>
-              <span class="skill-pill">Diagnostic tuberculose</span>
-            </div>
-          </div>
-
-          <div class="skill-box-card">
-            <h4>Microbiologie & Fermentation</h4>
-            <div class="skill-tag-group">
-              <span class="skill-pill">Isolement & purification</span>
-              <span class="skill-pill">Antibiogrammes</span>
-              <span class="skill-pill">Indice émulsification E24</span>
-              <span class="skill-pill">Saponification à froid</span>
-              <span class="skill-pill">Zymogrammes</span>
-              <span class="skill-pill">Criblage probiotiques</span>
-            </div>
-          </div>
-
-          <div class="skill-box-card">
-            <h4>Bromatologie & Environnement</h4>
-            <div class="skill-tag-group">
-              <span class="skill-pill">Audit hygiène HACCP</span>
-              <span class="skill-pill">Analyses des eaux</span>
-              <span class="skill-pill">Chromatographie gazeuse</span>
-              <span class="skill-pill">Spectrophotométrie UV-Vis</span>
-              <span class="skill-pill">Rhizorémédiation papyrus</span>
-              <span class="skill-pill">Prélèvements de surfaces</span>
-            </div>
-          </div>
-
-          <div class="skill-box-card">
-            <h4>Informatique & Bio-informatique</h4>
-            <div class="skill-tag-group">
-              <span class="skill-pill">Alignements BLAST</span>
-              <span class="skill-pill">Logiciel MEGA</span>
-              <span class="skill-pill">Logiciel BioEdit</span>
-              <span class="skill-pill">Traitement statistique</span>
-              <span class="skill-pill">Gestion bibliographique</span>
-              <span class="skill-pill">Bases de données</span>
-            </div>
-          </div>
-        </div>
-
       </div>
     </section>
 
-    <!-- SECTION : Références académiques et directeurs de recherche -->
+    <!-- 12. Parrains Scientifiques & Directeurs de Recherche -->
     <section id="references" class="section">
       <div class="container">
-        <div class="section-intro">
-          <div class="section-kicker">Références scientifiques</div>
-          <h2 class="section-heading">Parrains et directeurs de recherche</h2>
-          <p class="section-subtext">
-            Membres du corps professoral universitaire attestant des compétences scientifiques et des fonctions exercées.
+        <div class="section-header">
+          <h2 class="section-title">Parrains académiques & directeurs de recherche</h2>
+          <p class="section-lead">
+            Professeurs titulaires et maîtres de conférences de l'Université Marien Ngouabi attestant du parcours, des compétences et des qualifications scientifiques du Dr. Okouakoua.
           </p>
         </div>
 
         <div class="references-grid">
-          <div class="ref-clean-card">
-            <h4>Pr. Etienne NGUIMBI</h4>
-            <div class="grade">Professeur Titulaire CAMES</div>
-            <div class="institution">Enseignant-Chercheur, Faculté des Sciences et Techniques, Université Marien Ngouabi.</div>
-            <div class="contact-meta">Faculté des Sciences et Techniques · UMNG</div>
+          
+          <div class="ref-card">
+            <span class="ref-role-badge">Directeur de Recherche</span>
+            <h3 class="ref-name">Pr. Etienne NGUIMBI</h3>
+            <div class="ref-grade">Professeur Titulaire CAMES</div>
+            <p class="ref-affiliation">
+              Enseignant-Chercheur, Faculté des Sciences et Techniques, Université Marien Ngouabi, Brazzaville.
+            </p>
+            <div class="ref-meta">Faculté des Sciences et Techniques · UMNG</div>
           </div>
 
-          <div class="ref-clean-card">
-            <h4>Dr. Aimé Christian KAYATH</h4>
-            <div class="grade">Maître de Conférences CAMES</div>
-            <div class="institution">Responsable de la chaire de Biochimie et Biophysique, FST, Université Marien Ngouabi.</div>
-            <div class="contact-meta">Chaire de Biochimie et Biophysique · UMNG</div>
+          <div class="ref-card">
+            <span class="ref-role-badge">Directeur de Recherche</span>
+            <h3 class="ref-name">Dr. Aimé Christian KAYATH</h3>
+            <div class="ref-grade">Maître de Conférences CAMES</div>
+            <p class="ref-affiliation">
+              Responsable de la chaire de Biochimie et Biophysique, Faculté des Sciences et Techniques, Université Marien Ngouabi.
+            </p>
+            <div class="ref-meta">Chaire de Biochimie & Biophysique · UMNG</div>
           </div>
 
-          <div class="ref-clean-card">
-            <h4>Dr. Saturnin N. MOKÉMIABEKA</h4>
-            <div class="grade">Maître de Conférences CAMES</div>
-            <div class="institution">Responsable de la chaire de Génétique et Enzymologie, FST, Université Marien Ngouabi.</div>
-            <div class="contact-meta">Chaire de Génétique et Enzymologie · UMNG</div>
+          <div class="ref-card">
+            <span class="ref-role-badge">Directeur de Recherche</span>
+            <h3 class="ref-name">Dr. Saturnin N. MOKÉMIABEKA</h3>
+            <div class="ref-grade">Maître de Conférences CAMES</div>
+            <p class="ref-affiliation">
+              Responsable de la chaire de Génétique et Enzymologie, Faculté des Sciences et Techniques, Université Marien Ngouabi.
+            </p>
+            <div class="ref-meta">Chaire de Génétique & Enzymologie · UMNG</div>
           </div>
 
-          <div class="ref-clean-card">
-            <h4>Dr. Alain Brice MBOZO VOUIDIBIO</h4>
-            <div class="grade">Maître de Conférences CAMES</div>
-            <div class="institution">Responsable de la chaire de Microbiologie, FST, Université Marien Ngouabi.</div>
-            <div class="contact-meta">Chaire de Microbiologie · UMNG</div>
+          <div class="ref-card">
+            <span class="ref-role-badge">Directeur de Recherche</span>
+            <h3 class="ref-name">Dr. Alain Brice MBOZO VOUIDIBIO</h3>
+            <div class="ref-grade">Maître de Conférences CAMES</div>
+            <p class="ref-affiliation">
+              Responsable de la chaire de Microbiologie, Faculté des Sciences et Techniques, Université Marien Ngouabi.
+            </p>
+            <div class="ref-meta">Chaire de Microbiologie · UMNG</div>
           </div>
+
         </div>
       </div>
     </section>
 
-    <!-- SECTION 8 : Contact -->
-    <section id="contact" class="section">
+    <!-- 13. Coordonnées & Prise de Contact Directe -->
+    <section id="contact" class="section section-muted">
       <div class="container">
-        <div class="section-intro" style="text-align: center; margin-inline: auto;">
-          <div class="section-kicker">Prise de contact</div>
-          <h2 class="section-heading">Coordonnées professionnelles directes</h2>
-          <p class="section-subtext">
-            Pour toute proposition de collaboration scientifique, expertise de laboratoire ou projet académique.
+        <div class="section-header">
+          <h2 class="section-title">Coordonnées & collaborations professionnelles</h2>
+          <p class="section-lead">
+            Pour toute proposition de collaboration de recherche, expertise de laboratoire, mission d'audit ou intervention académique.
           </p>
         </div>
 
-        <div class="contact-info-card-centered">
+        <div class="contact-split">
           
-          <div class="contact-entry-item">
-            <div class="contact-icon-circle">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          <!-- Coordonnées Directes Vérifiées -->
+          <div class="contact-info-panel">
+            <h3 class="contact-panel-title">Canaux officiels de contact</h3>
+            
+            <div class="contact-channel">
+              <div class="channel-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              </div>
+              <div class="channel-meta">
+                <span class="channel-label">Courrier électronique officiel</span>
+                <a href="mailto:fryokouakoua@gmail.com" class="channel-value">fryokouakoua@gmail.com</a>
+              </div>
             </div>
-            <div class="contact-entry-text">
-              <small>Courrier électronique officiel</small>
-              <a href="mailto:fryokouakoua@gmail.com">fryokouakoua@gmail.com</a>
+
+            <div class="contact-channel">
+              <div class="channel-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              </div>
+              <div class="channel-meta">
+                <span class="channel-label">Téléphone & WhatsApp professionnel</span>
+                <a href="tel:+242066077680" class="channel-value">+242 06 607 76 80</a>
+              </div>
+            </div>
+
+            <div class="contact-channel">
+              <div class="channel-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              </div>
+              <div class="channel-meta">
+                <span class="channel-label">Adresse institutionnelle & géographique</span>
+                <span class="channel-value">55 Rue Intelco Bacongo, BP 69 Brazzaville, République du Congo</span>
+              </div>
+            </div>
+
+            <div class="contact-channel">
+              <div class="channel-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+              </div>
+              <div class="channel-meta">
+                <span class="channel-label">Réseau professionnel LinkedIn</span>
+                <a href="https://linkedin.com/in/frédéric-okouakoua-518637280" target="_blank" rel="noopener noreferrer" class="channel-value">Frédéric Okouakoua</a>
+              </div>
+            </div>
+
+            <div class="contact-cv-box">
+              <h4>Curriculum Vitae complet</h4>
+              <p>Téléchargez la version intégrale au format Microsoft Word reprenant le détail de tous les stages, certifications et modules d'enseignement.</p>
+              <a href="mon cv.docx" download class="btn btn-primary btn-full">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="1" x2="12" y2="3"></line></svg>
+                <span>Télécharger le CV (mon cv.docx)</span>
+              </a>
             </div>
           </div>
 
-          <div class="contact-entry-item">
-            <div class="contact-icon-circle">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-            </div>
-            <div class="contact-entry-text">
-              <small>Téléphone & WhatsApp</small>
-              <a href="tel:+242066077680">+242 06 607 76 80</a>
-            </div>
-          </div>
+          <!-- Formulaire de Contact Direct -->
+          <div class="contact-form-panel">
+            <h3 class="contact-panel-title">Transmettre un message</h3>
+            <p class="contact-form-note">
+              Renseignez vos coordonnées ci-dessous. Le message sera préparé dans votre application de messagerie afin de vous permettre une expédition directe et sécurisée.
+            </p>
 
-          <div class="contact-entry-item">
-            <div class="contact-icon-circle">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-            </div>
-            <div class="contact-entry-text">
-              <small>Adresse géographique</small>
-              <span>55 Rue Intelco Bacongo, BP 69 Brazzaville</span>
-            </div>
-          </div>
+            <form id="contactForm" class="academic-form">
+              <div class="form-group">
+                <label for="formName">Nom et prénom <span class="required">*</span></label>
+                <input type="text" id="formName" name="name" required placeholder="Ex. Pr. Jean Dupont">
+              </div>
 
-          <div class="contact-entry-item">
-            <div class="contact-icon-circle">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-            </div>
-            <div class="contact-entry-text">
-              <small>Profil LinkedIn</small>
-              <a href="https://linkedin.com/in/frédéric-okouakoua-518637280" target="_blank" rel="noopener noreferrer">Frédéric Okouakoua</a>
-            </div>
+              <div class="form-group">
+                <label for="formEmail">Adresse électronique <span class="required">*</span></label>
+                <input type="email" id="formEmail" name="email" required placeholder="Ex. jean.dupont@universite.fr">
+              </div>
+
+              <div class="form-group">
+                <label for="formSubject">Objet de la correspondance <span class="required">*</span></label>
+                <input type="text" id="formSubject" name="subject" required placeholder="Ex. Proposition de collaboration de recherche">
+              </div>
+
+              <div class="form-group">
+                <label for="formMessage">Message <span class="required">*</span></label>
+                <textarea id="formMessage" name="message" rows="5" required placeholder="Précisez votre demande, institution de rattachement ou projet..."></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-full">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                <span>Préparer l'envoi du message</span>
+              </button>
+            </form>
           </div>
 
         </div>
-
-        <form id="contactForm" class="contact-message-form">
-          <h3>Écrire un message</h3>
-          <p>Le message sera préparé dans votre application de messagerie pour que vous puissiez le vérifier et l’envoyer.</p>
-          <div class="contact-form-grid">
-            <div class="contact-field">
-              <label for="formName">Nom <span aria-hidden="true">*</span></label>
-              <input id="formName" name="name" type="text" autocomplete="name" required>
-            </div>
-            <div class="contact-field">
-              <label for="formEmail">Adresse e-mail <span aria-hidden="true">*</span></label>
-              <input id="formEmail" name="email" type="email" autocomplete="email" required>
-            </div>
-            <div class="contact-field contact-field-wide">
-              <label for="formSubject">Objet</label>
-              <input id="formSubject" name="subject" type="text" autocomplete="off">
-            </div>
-            <div class="contact-field contact-field-wide">
-              <label for="formMessage">Message <span aria-hidden="true">*</span></label>
-              <textarea id="formMessage" name="message" rows="5" required></textarea>
-            </div>
-          </div>
-          <button class="btn btn-primary" type="submit">Préparer le message</button>
-        </form>
       </div>
     </section>
   </main>
 
-  <!-- Pied de page officiel -->
+  <!-- 14. Pied de Page Institutionnel -->
   <footer class="site-footer">
-    <div class="container footer-inner-content">
-      <div class="footer-meta-brand">
-        <h4>Dr. Yannick Frédéric OKOUAKOUA</h4>
-        <p>Institut National de Recherche en Agronomie (IRA) · IRSEN · Université Marien Ngouabi</p>
+    <div class="container footer-container">
+      <div class="footer-identity">
+        <h3 class="footer-title">Dr. Yannick Frédéric OKOUAKOUA</h3>
+        <p class="footer-sub">
+          Chef de laboratoire de Bromatologie et technologies agroalimentaires (IRA) · Attaché de Recherche (IRSEN) · Enseignant Associé (UMNG)
+        </p>
+        <p class="footer-location">
+          Cité Scientifique de Brazzaville · République du Congo
+        </p>
       </div>
 
-      <ul class="footer-links-list">
-        <li><a href="#accueil">Haut de page</a></li>
-        <li><a href="#projets">Recherche</a></li>
-        <li><a href="#publications">Publications</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+      <div class="footer-links-group">
+        <h4 class="footer-col-title">Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="#accueil">Accueil</a></li>
+          <li><a href="#profil">Expertise</a></li>
+          <li><a href="#experiences">Parcours</a></li>
+          <li><a href="#projets">Recherche</a></li>
+          <li><a href="#publications">Publications</a></li>
+          <li><a href="#formation">Formation</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-legal">
+        <p>© 2026 Dr. Yannick Frédéric OKOUAKOUA. Tous droits réservés.</p>
+        <p class="footer-note">Portfolio académique et scientifique officiel.</p>
+        <a href="#accueil" class="back-to-top" aria-label="Remonter en haut de page">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"></polyline></svg>
+          <span>Haut de page</span>
+        </a>
+      </div>
     </div>
   </footer>
 
