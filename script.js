@@ -221,34 +221,3 @@ function showNotificationToast(message) {
     setTimeout(() => toast.remove(), 250);
   }, 3200);
 }
-
-/* --------------------------------------------------------------------------
-   6. Formulaire de Contact Professionnel (Validation & Préparation Mailto)
-   -------------------------------------------------------------------------- */
-function initContactFormSubmit() {
-  const form = document.getElementById('contactForm');
-  if (!form) return;
-
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-
-    const name = document.getElementById('formName').value.trim();
-    const email = document.getElementById('formEmail').value.trim();
-    const subject = document.getElementById('formSubject').value.trim();
-    const message = document.getElementById('formMessage').value.trim();
-
-    if (!name || !email || !message) {
-      showNotificationToast('Veuillez compléter tous les champs obligatoires.');
-      return;
-    }
-
-    const mailRecipient = 'fryokouakoua@gmail.com';
-    const mailSubject = encodeURIComponent(subject ? `[Portfolio] ${subject}` : `[Portfolio] Contact de ${name}`);
-    const mailBody = encodeURIComponent(
-      `Nom: ${name}\nAdresse électronique: ${email}\n\nMessage:\n${message}`
-    );
-
-    window.location.href = `mailto:${mailRecipient}?subject=${mailSubject}&body=${mailBody}`;
-    showNotificationToast('Votre client de messagerie a été ouvert avec le message préparé.');
-  });
-}
